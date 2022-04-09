@@ -1,0 +1,95 @@
+.header {
+  border-top: 1px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 15px;
+  height: 48px;
+  width: 100%;
+}
+
+.headerTitle {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+  display: flex;
+  align-items: center;
+}
+
+.headerButton {
+  display: flex;
+  align-items: center;
+}
+
+.headerIcon {
+  cursor: pointer;
+
+  height: 24px;
+  width: 24px;
+
+  margin-top: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 10px;
+}
+
+.clearButton {
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* list */
+.list {
+  background-color: #f6f6f9;
+  padding: 10px 10px;
+  width: 100%;
+}
+
+/* matches */
+.matches {
+  color: var(--black);
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.primaryAction,
+.secondaryAction {
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.primaryAction {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.secondaryAction {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}

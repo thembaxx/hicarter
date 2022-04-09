@@ -1,5 +1,11 @@
 .container {
   padding: 15px 20px 20px 20px;
+
+  width: 100%;
+}
+
+.inner {
+  position: relative;
   width: 100%;
 }
 
@@ -10,6 +16,8 @@
 
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .lblButton {
@@ -51,4 +59,19 @@
   padding: 8px 20px;
   margin-right: 8px;
   white-space: nowrap;
+}
+
+/* Popover */
+.popover {
+  background: #ffffff;
+  box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 0px 10px 10px;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  width: 100%;
+
+  padding: 26px 0 20px 0;
 }
