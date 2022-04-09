@@ -1,0 +1,48 @@
+.container {
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  position: relative;
+  padding: 0 10px;
+}
+
+.leftCommands,
+.rightCommands {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  cursor: pointer;
+  height: 44px;
+  width: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+}
+
+.icon {
+  fill: white;
+  height: 20px;
+  width: 20px;
+}
+
+.vl {
+  background-color: white;
+  opacity: 0.4;
+  height: 16px;
+  width: 1px;
+  margin: 0 5px;
+}

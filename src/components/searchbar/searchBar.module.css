@@ -1,0 +1,54 @@
+.container {
+  padding: 15px 20px 20px 20px;
+  width: 100%;
+}
+
+.inputWrapper {
+  background-color: white;
+  border-radius: 9999px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+}
+
+.lblButton {
+  cursor: text;
+  height: 48px;
+  width: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  border: none;
+  outline: none;
+  color: var(--black);
+  height: 100%;
+
+  flex-grow: 1;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.input::placeholder {
+  color: rgba(00, 0, 0, 0.67);
+  font-weight: 500;
+}
+
+.button {
+  background-color: var(--primary-color);
+  border-radius: 9999px;
+  color: white;
+  cursor: pointer;
+
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.5;
+
+  padding: 8px 20px;
+  margin-right: 8px;
+  white-space: nowrap;
+}
