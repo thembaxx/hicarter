@@ -17,8 +17,9 @@
 }
 
 body {
-  background-color: #f2f2f2;
+  background-color: #e6e6e6;
   font-family: "Work sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overscroll-behavior-x: none;
 }
 
 /* Works on Firefox */

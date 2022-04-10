@@ -20,7 +20,7 @@
   position: absolute;
   z-index: 2;
 
-  top: 50%;
+  bottom: 5%;
   transform: translate3d(0, -50%, 0);
   -webkit-transform: translate3d(0, -50%, 0);
 }
@@ -46,51 +46,9 @@
   margin-left: -10px;
 }
 
-.textOverlay {
-  background-color: black;
-  opacity: 0.2;
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
-.slideInfo {
-  padding-left: 50px;
-  padding-top: 10%;
-  position: relative;
-  z-index: 2;
-}
-
-.title {
-  font-size: 8vw;
-  font-weight: 900;
-  color: white;
-  line-height: 1.1;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-size: 16px;
-  font-weight: 500;
-  color: white;
-  line-height: 1.1;
-}
-
 .list {
   position: relative;
   z-index: 1;
-  height: 100%;
-  width: 100%;
-}
-
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  color: white;
-
   height: 100%;
   width: 100%;
 }

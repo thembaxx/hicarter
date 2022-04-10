@@ -4,9 +4,10 @@ import styles from "./carousel.module.css";
 import ChevLeft from "../icons/ChevLeft";
 import ChevRight from "../icons/ChevRight";
 import Indicator from "./Indicator";
+import Slide from "../slide/Slide";
 
-const Carousel = () => {
-  const [items, setItems] = useState([]);
+const Carousel = ({ items }) => {
+  // const [items, setItems] = useState([]);
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const intervalId = useRef(null);
@@ -39,13 +40,9 @@ const Carousel = () => {
   }, [progress, items.length]);
 
   useEffect(() => {
-    const fakeData = new Array(6).fill(false);
-
-    setItems(fakeData);
-
     return () => {
-      setItems([]);
       setIndex(0);
+      intervalId.current = null;
       resetTimer();
     };
   }, []);
@@ -68,31 +65,18 @@ const Carousel = () => {
           <ChevLeft />
         </div>
 
+        {/* items */}
         <div className={`${styles.list}`}>
-          {items.map((_, i) => (
-            <div
-              key={"item_" + i}
-              className={`${styles.item}`}
-              style={{ display: `${index === i ? "flex" : "none"}` }}
-            >
-              {i}
-            </div>
+          {items.map(({ action, headline, subheadline, img, route }, i) => (
+            <Slide
+              active={index === i}
+              headline={headline}
+              subheadline={subheadline}
+              img={img}
+              action={action}
+            />
           ))}
         </div>
-
-        {/* <div className={`${styles.slideInfo}`}>
-          <div className={`${styles.title}`}>
-            Work, study
-            <br />
-            and stream
-            <br />
-            without limits.{" "}
-          </div>
-          <div className={`${styles.subtitle}`}>
-            Your new device is just a <br />
-            few clicks away.
-          </div>
-        </div> */}
 
         {/* Nav right */}
         <div
@@ -108,8 +92,6 @@ const Carousel = () => {
         >
           <ChevRight />
         </div>
-
-        <div className={`${styles.textOverlay}`}></div>
       </div>
       {/* Indicators */}
       <div className={`${styles.indicators}`}>

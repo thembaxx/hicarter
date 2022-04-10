@@ -1,0 +1,92 @@
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.imgWrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.textOverlay {
+  background-color: black;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  padding-left: 25px;
+  padding-top: 8%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+}
+
+.title {
+  font-size: 8vw;
+  font-weight: 900;
+  color: white;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+  transition: transform 450ms ease-out, opacity 0.25s linear;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.2;
+
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+  transition: transform 450ms ease-out, opacity 0.25s linear;
+}
+
+.animate {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.unanimate {
+  opacity: 0;
+  transform: translate3d(20px, 0, 0);
+}
+
+.button {
+  cursor: pointer;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-weight: 600;
+  align-items: center;
+  padding: 10px 25px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 2px solid white;
+  color: white;
+  margin-top: 20px;
+
+  transition: 0.35s ease-out;
+}
+
+.button:hover {
+  color: black;
+  background-color: white;
+}
