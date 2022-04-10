@@ -20,6 +20,8 @@ body {
   background-color: #e6e6e6;
   font-family: "Work sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overscroll-behavior-x: none;
+  /* Debug */
+  height: 200vh;
 }
 
 /* Works on Firefox */

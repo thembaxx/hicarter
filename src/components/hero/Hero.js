@@ -45,7 +45,10 @@ const items = [
       </span>
     ),
     img: "https://www.renault.co.za/CountriesData/South_Africa/images/DigitalSA/Kwid/NewKwid/Final_AR-AM-Kwid-Climber-boot-space-shot-v2_ig_w600_h337.jpg",
-    route: "",
+    action: {
+      title: "browse cars",
+      route: "/",
+    },
   },
   {
     headline: (
