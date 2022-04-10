@@ -1,38 +1,14 @@
 import React from "react";
 import styles from "./hero.module.css";
 
-import ChevLeft from "./icons/ChevLeft";
-import ChevRight from "./icons/ChevRight";
+import Carousel from "./carousel/Carousel";
 import CarIcon from "./icons/CarIcon";
 import GearIcon from "./icons/GearIcon";
 
 const Hero = () => {
   return (
     <div>
-      {/* Carousel */}
-      <div className={`${styles.carousel}`}>
-        {/* Nav Left */}
-        <div role="button" className={`${styles.navButton} ${styles.navLeft}`}>
-          <ChevLeft />
-        </div>
-
-        {/* Nav right */}
-        <div role="button" className={`${styles.navButton} ${styles.navRight}`}>
-          <ChevRight />
-        </div>
-      </div>
-
-      {/* Indicators */}
-      <div className={`${styles.indicators}`}>
-        <div className={`${styles.indicator}`}></div>
-        <div className={`${styles.indicator}`}></div>
-        <div className={`${styles.indicator}`}></div>
-        <div className={`${styles.indicator} ${styles.activeIndicator}`}></div>
-        <div className={`${styles.indicator}`}></div>
-        <div className={`${styles.indicator}`}></div>
-      </div>
-
-      {/* Actions */}
+      <Carousel />
       <div className={`${styles.actions}`}>
         {/* Browse cars button */}
         <div role="button" className={`${styles.button} ${styles.primary}`}>
