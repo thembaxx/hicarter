@@ -16,7 +16,29 @@
 
 .subheading {
   color: var(--black-200);
-  font-size: 0.875rem;
+  font-size: 0.9375rem;
   font-weight: 500;
+  line-height: 1.5;
   margin-top: 10px;
+}
+
+.step {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 15px;
+}
+
+.stepTitle {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.stepText {
+  color: var(--black-200);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 5px;
 }

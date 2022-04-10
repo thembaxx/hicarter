@@ -18,6 +18,15 @@ const Home = () => {
               Remove the stress and guesswork of buying a new car. With Carter,
               buying a new car is easy with 3 simple steps.
             </div>
+            <div>
+            <div className={`${styles.step}`}>
+              <div className={`${styles.stepTitle}`}>Choose a vehicle</div>
+              <p className={`${styles.stepText}`}>
+                Simply select the vehicle you are interested in, view all it's
+                features and request a quote in less than a minute.
+              </p>
+            </div>
+            </div>
           </div>
         </Card>
       </div>

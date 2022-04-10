@@ -17,7 +17,7 @@ const Carousel = ({ items }) => {
   const [progress, setProgress] = useState(0);
   const intervalId = useRef(null);
 
-  const threshold = useRef(150); //required min distance traveled to be considered swipe
+  const threshold = useRef(100); //required min distance traveled to be considered swipe
   const restraint = useRef(100); // maximum distance allowed at the same time in perpendicular direction
   const allowedTime = useRef(300); // maximum time allowed to travel that distance
   let startX = 0;
@@ -66,7 +66,6 @@ const Carousel = ({ items }) => {
   };
 
   const handleScroll = (direction) => {
-    console.log(direction);
     switch (direction) {
       case swipeDirection.left:
         if (index === 0) {
