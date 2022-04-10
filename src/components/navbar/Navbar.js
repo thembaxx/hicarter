@@ -35,7 +35,7 @@ const Navbar = () => {
           </svg>
         </div>
         <h4 className={`${styles.title}`}>
-          hicarter<span style={{ color: "FF6701" }}>!</span>
+          hicarter<span style={{ color: "var(--secondary-color)" }}>!</span>
         </h4>
       </div>
 
