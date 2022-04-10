@@ -1,0 +1,22 @@
+.intro {
+  margin: 0 10px;
+  margin-top: 20px;
+}
+
+.inner {
+  padding: 20px;
+}
+
+.heading {
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--black-100);
+}
+
+.subheading {
+  color: var(--black-200);
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 10px;
+}

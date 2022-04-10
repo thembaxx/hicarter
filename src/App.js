@@ -1,17 +1,16 @@
 import React from "react";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/header/Header";
-import Hero from "./components/hero/Hero";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
     <div>
       <Header />
-      <Hero />
-      {/* <Routes>
-        <Route path='/' />
-      </Routes> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
