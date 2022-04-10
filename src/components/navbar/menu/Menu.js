@@ -59,9 +59,19 @@ const menuItems = [
     ],
   },
   {
-    name: "Our Dealerships",
+    name: "Locate Dealerships",
     route: "/",
     Icon: LocationIcon,
+    items: [
+      {
+        name: "Mitsubishi dealerships",
+        route: "/",
+      },
+      {
+        name: "Renault dealerships",
+        route: "/",
+      },
+    ],
   },
   {
     name: "Book a Service",
