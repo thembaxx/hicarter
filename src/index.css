@@ -1,7 +1,8 @@
 :root {
   --primary-color: #273fa0;
   /* #2329d6; */
-  --secondary-color: rgb(250, 198, 7);
+  --secondary-color: rgb(255, 172, 0);
+  /* rgb(250, 198, 7) */
   --black: #000000;
   --black-100: #191919;
   --black-200: #333333;
@@ -19,7 +20,8 @@
 body {
   /* background-color: #e6e6e6; */
   background-color: white;
-  font-family: "Work sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: "Work sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: "Montserrat", sans-serif;
   overscroll-behavior-x: none;
   /* Debug */
   height: 200vh;
