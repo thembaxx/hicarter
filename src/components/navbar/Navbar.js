@@ -55,7 +55,7 @@ const Navbar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
             <rect width="24" height="24" rx="3" fill="white" />
             <path
               d="M17 14.4375V18.5H7V5.5H17V7"
-              stroke="#2329D6"
+              stroke="#273fa0"
               stroke-width="3"
             />
             <path d="M17 8V10" stroke="#FF6701" stroke-width="3" />
