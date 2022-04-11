@@ -1,7 +1,7 @@
 :root {
-  --primary-color: #2329d6;
+  --primary-color: #273fa0;
+  /* #2329d6; */
   --secondary-color: rgb(250, 198, 7);
-  /*#ffe603;*/
   --black: #000000;
   --black-100: #191919;
   --black-200: #333333;
@@ -17,7 +17,8 @@
 }
 
 body {
-  background-color: #e6e6e6;
+  /* background-color: #e6e6e6; */
+  background-color: white;
   font-family: "Work sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overscroll-behavior-x: none;
   /* Debug */
