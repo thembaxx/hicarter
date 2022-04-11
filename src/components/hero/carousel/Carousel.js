@@ -66,6 +66,7 @@ const Carousel = ({ items }) => {
   };
 
   const handleScroll = (direction) => {
+    console.log(direction);
     switch (direction) {
       case swipeDirection.left:
         if (index === 0) {
@@ -158,7 +159,10 @@ const Carousel = ({ items }) => {
           role="button"
           className={`${styles.navButton} ${styles.navRight}`}
           onClick={() => handleScroll(swipeDirection.right)}
-          onTouchEnd={(e) => handleScroll(swipeDirection.right)}
+          onTouchEnd={(e) => {
+            console.log("clicked");
+            handleScroll(swipeDirection.right);
+          }}
         >
           <ChevRight />
         </div>
