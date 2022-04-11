@@ -40,7 +40,7 @@ const Indicator = ({ active, radius, stroke, progress }) => {
       {/*  */}
       <div
         className={`${styles.bg}`}
-        style={{ opacity: `${active ? 1 : 0.4}` }}
+        style={{ opacity: `${active ? 1 : 0.2}` }}
       ></div>
     </div>
   );

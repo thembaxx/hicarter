@@ -32,7 +32,7 @@ const StepsCard = () => {
             ))}
           </div>
           <div role="button" className={`${styles.button}`}>
-            Got any Questions?
+            Find out more
           </div>
         </div>
       </Card>

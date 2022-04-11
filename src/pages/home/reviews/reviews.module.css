@@ -1,6 +1,15 @@
 .container {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   padding: 25px 0;
+}
+
+.headline {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  line-height: 1.15;
+  font-weight: 700;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .list {

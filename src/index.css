@@ -1,5 +1,8 @@
 :root {
   --primary-color: #273fa0;
+  --blue-dark: #001e60;
+  --light-blue: #afe2f5;
+  --red: #c13441;
   /* #2329d6; */
   --secondary-color: rgb(255, 172, 0);
   /* rgb(250, 198, 7) */
@@ -9,6 +12,8 @@
   --black-500: #808080;
   --black-800: #cccccc;
   --black-900: #e6e6e6;
+
+  /* transition: transform 1s 500ms cubic-bezier(0.16, 1, 0.3, 1); */
 }
 
 * {

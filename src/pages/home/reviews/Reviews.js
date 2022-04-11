@@ -67,13 +67,10 @@ const Reviews = () => {
 
   return (
     <div className={`${styles.container}`}>
+      <div className={`${styles.headline}`}>Client reviews</div>
       <div ref={carouselRef} className={`${styles.list}`}>
         {reviews.map(({ content, rating, name, date, imgUrl }, i) => (
-          <div
-            key={i}
-            className={`${styles.item}`}
-            onClick={() => handleScroll(scrollDirection.next)}
-          >
+          <div key={i} className={`${styles.item}`} onClick={() => handleScroll(scrollDirection.right)}>
             <Review
               content={content}
               rating={rating}

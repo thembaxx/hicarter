@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div className={`${styles.container}`}>
       <Hero />
-      <div style={{ marginBottom: 40 }}>
+      <div style={{ marginBottom: 60 }}>
         <StepsCard />
       </div>
       <Reviews />
