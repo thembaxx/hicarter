@@ -1,14 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./searchBar.module.css";
 
 import FilterPopover from "./filterPopover/FilterPopover";
+const target = "searchbar";
 
-const SearchBar = () => {
+const SearchBar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
 
   const handlePopoverToggle = () => {
     setIsPopoverOpen((prev) => !prev);
+    if (toggleOverlay) toggleOverlay(!isPopoverOpen, target);
   };
+
+  useEffect(() => {
+    if (overlayTarget === target) setIsPopoverOpen(overlayOpen);
+  }, [overlayOpen, overlayTarget]);
 
   return (
     <div className={`${styles.container}`}>

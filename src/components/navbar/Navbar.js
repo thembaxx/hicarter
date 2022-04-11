@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./navbar.module.css";
 
 import Menu from "./menu/Menu";
@@ -6,12 +6,19 @@ import ChatIcon from "./icons/ChatIcon";
 import MenuIcon from "./icons/MenuIcon";
 import CloseIcon from "./icons/CloseIcon";
 
-const Navbar = () => {
+const target = "navbar";
+
+const Navbar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuClick = () => {
     setIsMenuOpen((prev) => !prev);
+    if (toggleOverlay) toggleOverlay(!isMenuOpen, target);
   };
+
+  useEffect(() => {
+    if (overlayTarget === target) setIsMenuOpen(overlayOpen);
+  }, [overlayOpen, overlayTarget]);
 
   return (
     <div className={`${styles.container}`}>

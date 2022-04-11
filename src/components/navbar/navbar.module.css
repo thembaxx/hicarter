@@ -7,6 +7,7 @@
   width: 100%;
 
   position: relative;
+  z-index: 22;
   padding: 0 10px;
 }
 

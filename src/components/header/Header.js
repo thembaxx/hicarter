@@ -1,14 +1,46 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./header.module.css";
 
 import Navbar from "../navbar/Navbar";
 import SearchBar from "../searchbar/SearchBar";
 
 const Header = () => {
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const overlayTarget = useRef(null);
+
+  const toggleOverlay = (show, target) => {
+    overlayTarget.current = target;
+    setIsOverlayOpen(show);
+  };
+
+  useEffect(() => {
+    return () => {
+      setIsOverlayOpen(false);
+      overlayTarget.current = null;
+    };
+  }, []);
+
   return (
     <div className={`${styles.container}`}>
-      <Navbar />
-      <SearchBar />
+      <div className={`${styles.inner}`}>
+        <Navbar
+          toggleOverlay={toggleOverlay}
+          overlayOpen={isOverlayOpen}
+          overlayTarget={overlayTarget.current}
+        />
+        <SearchBar
+          toggleOverlay={toggleOverlay}
+          overlayOpen={isOverlayOpen}
+          overlayTarget={overlayTarget.current}
+        />
+      </div>
+
+      {isOverlayOpen && (
+        <div
+          className={`${styles.overlay}`}
+          onClick={() => setIsOverlayOpen((prev) => !prev)}
+        ></div>
+      )}
     </div>
   );
 };
