@@ -21,7 +21,8 @@ body {
   /* background-color: #e6e6e6; */
   background-color: white;
   /* font-family: "Work sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
-  font-family: "Montserrat", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Mulish", sans-serif;
   overscroll-behavior-x: none;
   /* Debug */
   height: 200vh;
