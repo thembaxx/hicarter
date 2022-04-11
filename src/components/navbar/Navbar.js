@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { useSpring, animated } from "@react-spring/web";
 import styles from "./navbar.module.css";
 
 import Menu from "./menu/Menu";
@@ -10,6 +11,25 @@ const target = "navbar";
 
 const Navbar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  const menuAnimation = useSpring({
+    onStart: () => {
+      if (menuRef.current) {
+        const display = isMenuOpen ? "block" : "none";
+        menuRef.current.style.display = display;
+      }
+    },
+    onRest: () => {
+      if (menuRef.current) {
+        const display = isMenuOpen ? "block" : "none";
+
+        menuRef.current.style.display = display;
+      }
+    },
+    opacity: isMenuOpen ? 1 : 0,
+    transform: isMenuOpen ? `translateY(0)` : `translateY(-40px)`,
+  });
 
   const handleMenuClick = () => {
     setIsMenuOpen((prev) => !prev);
@@ -51,7 +71,9 @@ const Navbar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
         {/* Chat icon */}
         {!isMenuOpen && (
           <div className={`${styles.button}`} role="button">
-            <ChatIcon />
+            <div className={`${styles.chat}`}>
+              <ChatIcon />
+            </div>
           </div>
         )}
         {!isMenuOpen && <div className={`${styles.vl}`}></div>}
@@ -79,12 +101,19 @@ const Navbar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
         )}
       </div>
 
+      <animated.div
+        ref={menuRef}
+        className={`${styles.menu}`}
+        style={menuAnimation}
+      >
+        <Menu />
+      </animated.div>
       {/* Nav menu */}
-      {isMenuOpen && (
+      {/*isMenuOpen && (
         <div className={`${styles.menu}`}>
           <Menu />
         </div>
-      )}
+      )*/}
     </div>
   );
 };
