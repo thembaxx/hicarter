@@ -9,14 +9,18 @@
 .container svg {
   position: relative;
   z-index: 2;
+
+  transition: opacity 0.3s ease-out;
 }
 
 .circle {
   transition: stroke-dashoffset 1s;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
+  position: relative;
+  z-index: 10;
 
-  stroke: #359dd6;
+  stroke: #304ffe;
 }
 
 .curtain {

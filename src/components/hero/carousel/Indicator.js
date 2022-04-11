@@ -14,6 +14,16 @@ const Indicator = ({ active, radius, stroke, progress }) => {
         width={radius * 2}
         style={{ opacity: active ? 1 : 0 }}
       >
+        {/* Curtain */}
+        <circle
+          className={`${styles.curtain}`}
+          fill="transparent"
+          strokeWidth={stroke}
+          r={normalizedRadius}
+          cx={radius}
+          cy={radius}
+        />
+
         <circle
           className={`${styles.circle}`}
           stroke="white"
@@ -21,16 +31,6 @@ const Indicator = ({ active, radius, stroke, progress }) => {
           strokeWidth={stroke}
           strokeDasharray={circumference + " " + circumference}
           style={{ strokeDashoffset }}
-          r={normalizedRadius}
-          cx={radius}
-          cy={radius}
-        />
-
-        {/* Curtain */}
-        <circle
-          className={`${styles.curtain}`}
-          fill="transparent"
-          strokeWidth={stroke}
           r={normalizedRadius}
           cx={radius}
           cy={radius}
