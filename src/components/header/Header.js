@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "./header.module.css";
 
 import Navbar from "../navbar/Navbar";
 import SearchBar from "../searchbar/SearchBar";
 
 const Header = ({ toggleScroll }) => {
-  const [isInputFocused, setIsInputFocused] = useState(false);
   const [hideNav, setHideNav] = useState(false);
 
   const inputFocusChanged = (isFocused, toggle) => {
@@ -17,12 +16,6 @@ const Header = ({ toggleScroll }) => {
       toggleScroll(true);
     }
   };
-
-  useEffect(() => {
-    return () => {
-      setIsInputFocused(false);
-    };
-  }, []);
 
   return (
     <div className={`${styles.container}`}>
