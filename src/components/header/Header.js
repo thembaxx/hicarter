@@ -5,38 +5,39 @@ import Navbar from "../navbar/Navbar";
 import SearchBar from "../searchbar/SearchBar";
 
 const Header = ({ toggleScroll }) => {
-  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
-  const overlayTarget = useRef(null);
+  const [isInputFocused, setIsInputFocused] = useState(false);
+  const [hideNav, setHideNav] = useState(false);
 
-  const toggleOverlay = (show, target) => {
-    overlayTarget.current = target;
-    setIsOverlayOpen(show);
+  const inputFocusChanged = (isFocused, toggle) => {
+    if (isFocused && toggle) {
+      setHideNav(true);
+      toggleScroll(false);
+    } else if (!isFocused && toggle) {
+      setHideNav(false);
+      toggleScroll(true);
+    }
   };
 
   useEffect(() => {
     return () => {
-      setIsOverlayOpen(false);
-      overlayTarget.current = null;
+      setIsInputFocused(false);
     };
   }, []);
 
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.inner}`}>
-        <Navbar toggleScroll={toggleScroll} />
-        <SearchBar
-          toggleOverlay={toggleOverlay}
-          overlayOpen={isOverlayOpen}
-          overlayTarget={overlayTarget.current}
-        />
-      </div>
-
-      {isOverlayOpen && (
         <div
-          className={`${styles.overlay}`}
-          onClick={() => setIsOverlayOpen((prev) => !prev)}
-        ></div>
-      )}
+          className={`${styles.nav}`}
+          style={{
+            opacity: hideNav ? 0 : 1,
+            height: hideNav ? 0 : 64,
+          }}
+        >
+          <Navbar toggleScroll={toggleScroll} />
+        </div>
+        <SearchBar inputFocusChanged={inputFocusChanged} />
+      </div>
     </div>
   );
 };

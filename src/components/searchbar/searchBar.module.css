@@ -1,12 +1,17 @@
 .container {
-  padding: 15px 20px 20px 20px;
+  background-color: var(--primary-color);
+  padding-bottom: 20px;
   position: relative;
   z-index: inherit;
   width: 100%;
 }
 
 .inner {
+  background-color: var(--primary-color);
+  padding: 15px 20px;
   position: relative;
+  z-index: 11;
+
   width: 100%;
 }
 
@@ -19,16 +24,24 @@
   align-items: center;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 
 .lblButton {
-  cursor: text;
   height: 48px;
   width: 48px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+}
+
+.form {
+  height: 100%;
+  flex-grow: 1;
 }
 
 .input {
@@ -36,10 +49,11 @@
   outline: none;
   color: var(--black);
   height: 100%;
-
   flex-grow: 1;
+  width: 100%;
   font-size: 0.875rem;
   font-weight: 500;
+  padding-left: 48px;
 }
 
 .input::placeholder {
@@ -62,17 +76,21 @@
   white-space: nowrap;
 }
 
-/* Popover */
-.popover {
-  background: #ffffff;
-  box-shadow: 0px 10px 20px -12px rgba(0, 0, 0, 0.08);
-  border-radius: 0px 0px 10px 10px;
-
+.panel {
+  background-color: white;
+  color: black;
+  height: 100vh;
+  width: 100%;
+  transition: transform 0.65s cubic-bezier(0.19, 1, 0.22, 1), opacity 450ms;
   position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 50%;
+  top: 0;
+  padding-top: 84px;
+  z-index: 10;
+}
+
+.filters {
+  height: 100%;
   width: 100%;
 
-  padding: 26px 0 20px 0;
+  padding: 0 20px;
 }

@@ -3,20 +3,17 @@ import React from "react";
 const ChevIcon = () => {
   return (
     <svg
-      width="7"
-      height="12"
-      viewBox="0 0 7 12"
+      width="13"
+      height="8"
+      viewBox="0 0 13 8"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M1 10.6L5.8 5.8L1 1L5.8 5.8L1 10.6Z"
+        d="M2 2L6.8 6.8L11.6 2"
         stroke="#333333"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        stroke-width="1.5"
+        stroke-linecap="square"
       />
     </svg>
   );

@@ -10,7 +10,7 @@ import MileageIcon from "../icons/MileageIcon";
 
 const FilterPopover = ({ toggle }) => {
   return (
-    <div>
+    <div className={`${styles.container}`}>
       {/* Header */}
       <header className={`${styles.header}`}>
         <div className={`${styles.headerTitle}`}>
@@ -33,13 +33,6 @@ const FilterPopover = ({ toggle }) => {
         ))}
       </div>
 
-      {/* Matches */}
-      <div className={`${styles.matches}`}>
-        <span>
-          <b>127</b> matching results found
-        </span>
-      </div>
-
       {/* Actions */}
       <div className={`${styles.actions}`}>
         <div
@@ -51,7 +44,7 @@ const FilterPopover = ({ toggle }) => {
         </div>
         <div style={{ width: 10 }}></div>
         <div role="button" className={`${styles.primaryAction}`}>
-          See cars
+          See all results
         </div>
       </div>
     </div>

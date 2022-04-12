@@ -2,54 +2,79 @@ import React, { useEffect, useState } from "react";
 import styles from "./searchBar.module.css";
 
 import FilterPopover from "./filterPopover/FilterPopover";
-const target = "searchbar";
 
-const SearchBar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
-  const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+const SearchBar = ({ inputFocusChanged }) => {
+  const [query, setQuery] = useState("");
+  const [showPanel, setShowPanel] = useState(false);
 
   const handlePopoverToggle = () => {
-    setIsPopoverOpen((prev) => !prev);
-    if (toggleOverlay) toggleOverlay(!isPopoverOpen, target);
+    setShowPanel(false);
+    inputFocusChanged(false, true);
+  };
+
+  const handleInputChange = (e) => {
+    const value = e.currentTarget.value;
+    setQuery(value);
+  };
+
+  const handleInputFocusChange = (event) => {
+    event.preventDefault();
+
+    const isFocused = event.type === "focus" ? true : false;
+    if (isFocused) {
+      inputFocusChanged(isFocused, true);
+      setShowPanel(true);
+    }
   };
 
   useEffect(() => {
-    if (overlayTarget === target) setIsPopoverOpen(overlayOpen);
-  }, [overlayOpen, overlayTarget]);
+    return () => {
+      setQuery("");
+      setShowPanel(false);
+    };
+  }, []);
 
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.inner}`}>
         <div className={`${styles.inputWrapper}`}>
-          <div role="button" className={`${styles.lblButton}`}>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12.6667 12.6667L15.6667 15.6667"
-                stroke="#B3B3B3"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-              <path
-                d="M9 14C11.7614 14 14 11.7614 14 9C14 6.23858 11.7614 4 9 4C6.23858 4 4 6.23858 4 9C4 11.7614 6.23858 14 9 14Z"
-                stroke="#B3B3B3"
-                strokeWidth="1.5"
-                strokeLinecap="square"
-              />
-            </svg>
-          </div>
-
           {/* Input */}
-          <input
-            className={`${styles.input}`}
-            type="text"
-            placeholder="Search brand, model etc."
-            spellCheck={false}
-          />
+          <form className={`${styles.form}`}>
+            <lbl htmlFor="search" className={`${styles.lblButton}`}>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.6667 12.6667L15.6667 15.6667"
+                  stroke="#B3B3B3"
+                  strokeWidth="1.5"
+                  strokeLinecap="square"
+                />
+                <path
+                  d="M9 14C11.7614 14 14 11.7614 14 9C14 6.23858 11.7614 4 9 4C6.23858 4 4 6.23858 4 9C4 11.7614 6.23858 14 9 14Z"
+                  stroke="#B3B3B3"
+                  strokeWidth="1.5"
+                  strokeLinecap="square"
+                />
+              </svg>
+            </lbl>
+            <input
+              id="search"
+              className={`${styles.input}`}
+              type="text"
+              onChange={handleInputChange}
+              value={query}
+              onFocus={handleInputFocusChange}
+              onBlur={handleInputFocusChange}
+              placeholder="Search brand, model etc."
+              spellCheck={false}
+              autoComplete="off"
+            />
+          </form>
 
           {/* Filter button */}
           <div
@@ -60,13 +85,17 @@ const SearchBar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
             Filters
           </div>
         </div>
-
-        {/* Popover */}
-        {isPopoverOpen && (
-          <div className={`${styles.popover}`}>
-            <FilterPopover toggle={handlePopoverToggle} />
-          </div>
-        )}
+      </div>
+      <div
+        className={`${styles.panel}`}
+        style={{
+          opacity: showPanel ? 1 : 0,
+          transform: showPanel ? `translateY(0)` : `translateY(100%)`,
+        }}
+      >
+        <div className={`${styles.filters}`}>
+          <FilterPopover toggle={handlePopoverToggle} />
+        </div>
       </div>
     </div>
   );

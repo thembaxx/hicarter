@@ -1,16 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-content: space-between;
+}
+
 .header {
-  border-top: 1px solid #f2f2f2;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px 0 15px;
-  height: 48px;
+  height: 64px;
   width: 100%;
+  padding-left: 10px;
 }
 
 .headerTitle {
   color: var(--black);
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.5;
 
@@ -26,13 +32,13 @@
 .headerIcon {
   cursor: pointer;
 
-  margin-top: -2px;
+  margin-top: -0px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 .clearButton {
@@ -45,15 +51,21 @@
 
 /* list */
 .list {
-  background-color: #f6f6f9;
-  padding: 10px 10px;
+  padding: 10px 0;
+  flex-grow: 1;
   width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.footer {
+  border: 1px solid red;
 }
 
 /* matches */
 .matches {
   color: var(--black);
-  padding: 15px 20px;
+  padding: 15px 0;
   font-size: 14px;
   font-weight: 500;
 }
@@ -62,21 +74,21 @@
 .actions {
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 48px;
   width: 100%;
-  padding: 0 20px;
+  margin-bottom: 20px;
 }
 
 .primaryAction,
 .secondaryAction {
-  border-radius: 5px;
+  border-radius: 2.5rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 0.8125rem;
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 400;
   flex-grow: 1;
   height: 100%;
 }
@@ -84,9 +96,10 @@
 .primaryAction {
   background-color: var(--primary-color);
   color: white;
+  padding: 0 20px;
 }
 
 .secondaryAction {
-  border: 1px solid var(--primary-color);
+  font-weight: 700;
   color: var(--primary-color);
 }
