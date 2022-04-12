@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useSpring, animated } from "@react-spring/web";
+import React, { useState, useRef } from "react";
 import styles from "./navbar.module.css";
 
 import Menu from "./menu/Menu";
@@ -7,38 +6,14 @@ import ChatIcon from "./icons/ChatIcon";
 import MenuIcon from "./icons/MenuIcon";
 import CloseIcon from "./icons/CloseIcon";
 
-const target = "navbar";
-
-const Navbar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
+const Navbar = ({ toggleScroll }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
 
-  const menuAnimation = useSpring({
-    onStart: () => {
-      if (menuRef.current) {
-        const display = isMenuOpen ? "block" : "none";
-        menuRef.current.style.display = display;
-      }
-    },
-    onRest: () => {
-      if (menuRef.current) {
-        const display = isMenuOpen ? "block" : "none";
-
-        menuRef.current.style.display = display;
-      }
-    },
-    opacity: isMenuOpen ? 1 : 0,
-    transform: isMenuOpen ? `translateY(0)` : `translateY(-40px)`,
-  });
-
   const handleMenuClick = () => {
     setIsMenuOpen((prev) => !prev);
-    if (toggleOverlay) toggleOverlay(!isMenuOpen, target);
+    toggleScroll(isMenuOpen);
   };
-
-  useEffect(() => {
-    if (overlayTarget === target) setIsMenuOpen(overlayOpen);
-  }, [overlayOpen, overlayTarget]);
 
   return (
     <div className={`${styles.container}`}>
@@ -101,19 +76,15 @@ const Navbar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
         )}
       </div>
 
-      <animated.div
+      <div
         ref={menuRef}
         className={`${styles.menu}`}
-        style={menuAnimation}
+        style={{
+          transform: isMenuOpen ? `translateY(0)` : `translateY(100%)`,
+        }}
       >
         <Menu />
-      </animated.div>
-      {/* Nav menu */}
-      {/*isMenuOpen && (
-        <div className={`${styles.menu}`}>
-          <Menu />
-        </div>
-      )*/}
+      </div>
     </div>
   );
 };

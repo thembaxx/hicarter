@@ -12,10 +12,8 @@ import MenuItem from "./MenuItem";
 const Menu = () => {
   return (
     <div className={`${styles.container}`}>
-      <h2 className={`${styles.title}`}>
-        With Carter, you'll get the service and advice that you deserve.
-      </h2>
-      <div>
+      <div className={`${styles.hr2}`}></div>
+      <div className={`${styles.list}`}>
         {menuItems.map(({ name, route, Icon, items }, i) => (
           <div key={i}>
             <MenuItem name={name} route={route} Icon={Icon} subItems={items} />

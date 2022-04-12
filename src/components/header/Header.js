@@ -4,7 +4,7 @@ import styles from "./header.module.css";
 import Navbar from "../navbar/Navbar";
 import SearchBar from "../searchbar/SearchBar";
 
-const Header = () => {
+const Header = ({ toggleScroll }) => {
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
   const overlayTarget = useRef(null);
 
@@ -23,11 +23,7 @@ const Header = () => {
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.inner}`}>
-        <Navbar
-          toggleOverlay={toggleOverlay}
-          overlayOpen={isOverlayOpen}
-          overlayTarget={overlayTarget.current}
-        />
+        <Navbar toggleScroll={toggleScroll} />
         <SearchBar
           toggleOverlay={toggleOverlay}
           overlayOpen={isOverlayOpen}

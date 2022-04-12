@@ -92,6 +92,10 @@ const Reviews = () => {
           </div>
         </div>
       </div>
+      <p className={`${styles.subheading}`}>
+        With Carter, you will get the best Service and advice that you deserve.
+        Always!
+      </p>
       <div ref={carouselRef} className={`${styles.list}`}>
         {reviews.map(({ content, rating, name, date, imgUrl }, i) => (
           <div key={i} className={`${styles.item}`}>
@@ -132,13 +136,6 @@ const reviews = [
     content: "Very helpful, got my car within 7 days",
     date: "25 Dec, 2021",
     imgUrl: "https://randomuser.me/api/portraits/women/18.jpg",
-  },
-  {
-    rating: 4.8,
-    name: "",
-    content: "“”",
-    date: "25 Dec, 2021",
-    imgUrl: "https://randomuser.me/api/portraits/women/12.jpg",
   },
   {
     rating: 4.8,

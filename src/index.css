@@ -27,7 +27,13 @@ body {
   font-family: "Mulish", sans-serif;
   overscroll-behavior-x: none;
   /* Debug */
-  height: 200vh;
+  overflow: hidden;
+}
+
+.app {
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 /* Works on Firefox */

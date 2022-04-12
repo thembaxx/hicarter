@@ -9,15 +9,12 @@ const Review = ({ content, rating, name, date, imgUrl }) => {
 
   return (
     <div className={`${styles.container}`}>
-      <div className={`${styles.content}`}>
-        <div className={`${styles.rating}`}>
-          {stars.map((_, i) => (
-            <StarIcon key={i} />
-          ))}
-          <span style={{ marginLeft: 4 }}>{rating}</span>
-        </div>
-        <div className={`${styles.paragraph}`}>{content}</div>
+      <div className={`${styles.rating}`}>
+        {stars.map((_, i) => (
+          <StarIcon key={i} />
+        ))}
       </div>
+      <div className={`${styles.paragraph}`}>{content}</div>
       <div className={`${styles.profile}`}>
         <div className={`${styles.imgWrapper}`}>
           <img className={`${styles.img}`} src={imgUrl} alt="" />
