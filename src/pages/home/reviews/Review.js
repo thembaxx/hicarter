@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./review.module.css";
 
-import StarIcon from "./StarIcon";
+import StarIcon from "./icons/StarIcon";
 
 const Review = ({ content, rating, name, date, imgUrl }) => {
   let starRating = rating ? Math.trunc(rating) : 0;
@@ -16,7 +16,7 @@ const Review = ({ content, rating, name, date, imgUrl }) => {
           ))}
           <span style={{ marginLeft: 4 }}>{rating}</span>
         </div>
-        <div>{content}</div>
+        <div className={`${styles.paragraph}`}>{content}</div>
       </div>
       <div className={`${styles.profile}`}>
         <div className={`${styles.imgWrapper}`}>

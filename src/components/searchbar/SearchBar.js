@@ -47,7 +47,7 @@ const SearchBar = ({ toggleOverlay, overlayOpen, overlayTarget }) => {
           <input
             className={`${styles.input}`}
             type="text"
-            placeholder="Search by brand, model etc."
+            placeholder="Search brand, model etc."
             spellCheck={false}
           />
 

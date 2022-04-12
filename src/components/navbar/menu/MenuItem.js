@@ -58,8 +58,8 @@ const MenuItem = ({ name, Icon, subItems }) => {
       {/* Submenu */}
       {isExpanded && (
         <div className={`${styles.submenu}`}>
-          {subItems?.map(({ name }) => (
-            <div className={`${styles.subItem}`}>
+          {subItems?.map(({ name }, i) => (
+            <div key={i} className={`${styles.subItem}`}>
               <div>{name}</div>
               <div role="button" className={`${styles.button}`}>
                 <ChevRightIcon />
