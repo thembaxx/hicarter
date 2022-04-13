@@ -14,11 +14,14 @@ const StepsCard = () => {
       <Card>
         <div className={`${styles.inner}`}>
           <div className={`${styles.heading}`}>
-            Making buying a car fun, easy and simple.
+            Making buying a car fun, simple and easy.
           </div>
           <div className={`${styles.subheading}`}>
-            All it takes is <b>3 steps</b> to get the car of your dreams in your hands
-            and on the road.
+            All it takes is{" "}
+            <b>
+              Three <em>simple</em> steps
+            </b>{" "}
+            to get the car of your dreams in your hands and on the road.
           </div>
           <div>
             {steps.map(({ Img, title, subtitle }, i) => (
