@@ -9,10 +9,19 @@ const Home = () => {
   return (
     <div className={`${styles.container}`}>
       <Hero />
-      <div style={{ marginBottom: 60 }}>
-        <StepsCard />
+      <div
+        style={{
+          backgroundColor: "white",
+          position: "relative",
+          zIndex: 15,
+          paddingTop: 1,
+        }}
+      >
+        <div style={{ marginBottom: 60 }}>
+          <StepsCard />
+        </div>
+        <Reviews />
       </div>
-      <Reviews />
     </div>
   );
 };

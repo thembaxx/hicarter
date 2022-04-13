@@ -7,7 +7,7 @@ import GearIcon from "./icons/GearIcon";
 
 const Hero = () => {
   return (
-    <div>
+    <div className={`${styles.container}`}>
       <Carousel items={items} />
       <div className={`${styles.actions}`}>
         {/* Browse cars button */}

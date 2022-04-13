@@ -1,3 +1,10 @@
+.container {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 152px;
+  z-index: 10;
+}
+
 /* Actions */
 .actions {
   background-color: white;
