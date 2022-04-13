@@ -3,6 +3,7 @@ import styles from "./tabs.module.css";
 
 import TabPicker from "../tabPicker/TabPicker";
 import Filters from "../filters/Filters";
+import Popular from "./popular/Popular";
 
 const Tabs = () => {
   const [tabs, setTabs] = useState([]);
@@ -46,7 +47,7 @@ const Tabs = () => {
 const items = [
   {
     name: "Popular",
-    Tab: null,
+    Tab: <Popular />,
   },
   {
     name: "Top results",

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./filters.module.css";
 
+import Header from "../tabs/header/Header";
 import FilterItem from "./FilterItem";
 import CarIcon from "../icons/CarIcon";
 import WalletIcon from "../icons/WalletIcon";
@@ -10,17 +11,7 @@ import MileageIcon from "../icons/MileageIcon";
 const Filters = () => {
   return (
     <div className={`${styles.container}`}>
-      {/* Header */}
-      <header className={`${styles.header}`}>
-        <div className={`${styles.headerTitle}`}>
-          <div role="button" className={`${styles.headerButton}`}>
-            <div>Filters</div>
-          </div>
-        </div>
-        <div role="button" className={`${styles.clearButton}`}>
-          Clear filters
-        </div>
-      </header>
+      <Header title="Filters" action={{ name: "Clear filters" }} />
 
       {/* List */}
       <div className={`${styles.list}`}>
