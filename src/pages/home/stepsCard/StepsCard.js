@@ -17,11 +17,8 @@ const StepsCard = () => {
             Making buying a car fun, simple and easy.
           </div>
           <div className={`${styles.subheading}`}>
-            All it takes is{" "}
-            <b>
-              Three <em>simple</em> steps
-            </b>{" "}
-            to get the car of your dreams in your hands and on the road.
+            All it takes is <b>Three simple steps</b> to get the car of your
+            dreams in your hands and on the road.
           </div>
           <div>
             {steps.map(({ Img, title, subtitle }, i) => (
