@@ -26,6 +26,7 @@ body {
   background-color: white;
   font-family: "Mulish", sans-serif;
   overscroll-behavior-x: none;
+  -webkit-tap-highlight-color: transparent;
   /* Debug */
   overflow: hidden;
 }
@@ -34,6 +35,7 @@ body {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior-x: none;
 }
 
 .hidescrollbar {

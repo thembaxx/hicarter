@@ -3,16 +3,16 @@ import React from "react";
 const ChevRightIcon = () => {
   return (
     <svg
-      width="18"
-      height="18"
-      viewBox="0 0 18 18"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M7.19995 5.39999L10.8 8.99999L7.19995 12.6"
+        d="M9.59998 7.19998L14.4 12L9.59998 16.8"
         stroke="#333333"
-        strokeWidth="1.125"
+        strokeWidth="1.5"
         strokeLinecap="square"
       />
     </svg>
