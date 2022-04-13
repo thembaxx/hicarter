@@ -74,6 +74,10 @@ const Reviews = () => {
     <div className={`${styles.container}`}>
       <div className={`${styles.header}`}>
         <div className={`${styles.headline}`}>Client reviews</div>
+        <p className={`${styles.subheading}`}>
+        With Carter, you will get the best Service and advice that you deserve.
+        Always!
+      </p>
         <div className={`${styles.nav}`}>
           <div
             role="button"
@@ -92,10 +96,7 @@ const Reviews = () => {
           </div>
         </div>
       </div>
-      <p className={`${styles.subheading}`}>
-        With Carter, you will get the best Service and advice that you deserve.
-        Always!
-      </p>
+      
       <div ref={carouselRef} className={`${styles.list}`}>
         {reviews.map(({ content, rating, name, date, imgUrl }, i) => (
           <div key={i} className={`${styles.item}`}>

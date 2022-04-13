@@ -17,7 +17,7 @@ const Home = () => {
           paddingTop: 1,
         }}
       >
-        <div style={{ marginBottom: 60 }}>
+        <div style={{ marginBottom: 40 }}>
           <StepsCard />
         </div>
         <Reviews />
