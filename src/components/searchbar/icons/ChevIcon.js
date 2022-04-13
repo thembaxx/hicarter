@@ -12,8 +12,8 @@ const ChevIcon = () => {
       <path
         d="M2 2L6.8 6.8L11.6 2"
         stroke="#333333"
-        stroke-width="1.5"
-        stroke-linecap="square"
+        strokeWidth="1.5"
+        strokeLinecap="square"
       />
     </svg>
   );

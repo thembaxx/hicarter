@@ -100,13 +100,6 @@
   transition: transform 0.65s cubic-bezier(0.19, 1, 0.22, 1), opacity 450ms;
   position: absolute;
   top: 0;
-  padding-top: 84px;
+  padding-top: 78px;
   z-index: 10;
-}
-
-.filters {
-  height: 100%;
-  width: 100%;
-
-  padding: 0 20px;
 }

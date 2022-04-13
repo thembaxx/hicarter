@@ -1,23 +1,19 @@
 import React from "react";
-import styles from "./filterPopover.module.css";
+import styles from "./filters.module.css";
 
 import FilterItem from "./FilterItem";
-import FilterIcon from "../icons/FilterIcon";
 import CarIcon from "../icons/CarIcon";
 import WalletIcon from "../icons/WalletIcon";
 import GaugeIcon from "../icons/GaugeIcon";
 import MileageIcon from "../icons/MileageIcon";
 
-const FilterPopover = () => {
+const Filters = () => {
   return (
     <div className={`${styles.container}`}>
       {/* Header */}
       <header className={`${styles.header}`}>
         <div className={`${styles.headerTitle}`}>
           <div role="button" className={`${styles.headerButton}`}>
-            <div className={`${styles.headerIcon}`}>
-              <FilterIcon />
-            </div>
             <div>Filters</div>
           </div>
         </div>
@@ -55,4 +51,4 @@ const filterItems = [
   },
 ];
 
-export default FilterPopover;
+export default Filters;

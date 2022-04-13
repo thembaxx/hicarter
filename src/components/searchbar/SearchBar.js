@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from "./searchBar.module.css";
 
-import FilterPopover from "./filterPopover/FilterPopover";
 import BackIcon from "./icons/BackIcon";
+import Tabs from "./tabs/Tabs";
 
 const SearchBar = ({ inputFocusChanged }) => {
   const [query, setQuery] = useState("");
@@ -81,7 +81,7 @@ const SearchBar = ({ inputFocusChanged }) => {
               value={query}
               onFocus={handleInputFocusChange}
               onBlur={handleInputFocusChange}
-              placeholder="Search brand, model etc."
+              placeholder="Search"
               spellCheck={false}
               autoComplete="off"
             />
@@ -100,9 +100,7 @@ const SearchBar = ({ inputFocusChanged }) => {
           transform: showPanel ? `translateY(0)` : `translateY(100%)`,
         }}
       >
-        <div className={`${styles.filters}`}>
-          <FilterPopover />
-        </div>
+        <Tabs />
       </div>
     </div>
   );
