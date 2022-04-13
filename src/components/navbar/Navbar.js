@@ -5,6 +5,7 @@ import Menu from "./menu/Menu";
 import ChatIcon from "./icons/ChatIcon";
 import MenuIcon from "./icons/MenuIcon";
 import CloseIcon from "./icons/CloseIcon";
+import Footer from "./footer/Footer";
 
 const Navbar = ({ toggleScroll }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -84,6 +85,7 @@ const Navbar = ({ toggleScroll }) => {
         }}
       >
         <Menu />
+        <Footer />
       </div>
     </div>
   );
