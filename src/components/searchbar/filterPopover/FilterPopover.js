@@ -8,7 +8,7 @@ import WalletIcon from "../icons/WalletIcon";
 import GaugeIcon from "../icons/GaugeIcon";
 import MileageIcon from "../icons/MileageIcon";
 
-const FilterPopover = ({ toggle }) => {
+const FilterPopover = () => {
   return (
     <div className={`${styles.container}`}>
       {/* Header */}
@@ -31,21 +31,6 @@ const FilterPopover = ({ toggle }) => {
         {filterItems.map(({ name, Icon }, i) => (
           <FilterItem key={i} name={name} Icon={Icon} />
         ))}
-      </div>
-
-      {/* Actions */}
-      <div className={`${styles.actions}`}>
-        <div
-          role="button"
-          className={`${styles.secondaryAction}`}
-          onClick={toggle}
-        >
-          Cancel
-        </div>
-        <div style={{ width: 10 }}></div>
-        <div role="button" className={`${styles.primaryAction}`}>
-          See all results
-        </div>
       </div>
     </div>
   );

@@ -1,20 +1,18 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 
 function App() {
-  const containerRef = useRef(null);
+  const [hideScrollbar, setHideScrollbar] = useState(false);
 
   const toggleScroll = (showScroll) => {
-    if (containerRef.current) {
-      containerRef.current.style.overflowY = showScroll ? "auto" : "hidden";
-    }
+    setHideScrollbar(!showScroll);
   };
 
   return (
-    <div ref={containerRef} className="app">
+    <div className={`app ${hideScrollbar ? "hidescrollbar" : ""}`}>
       <Header toggleScroll={toggleScroll} />
       <Routes>
         <Route path="/" element={<Home />} />

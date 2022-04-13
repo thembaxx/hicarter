@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import styles from "./searchBar.module.css";
 
 import FilterPopover from "./filterPopover/FilterPopover";
+import BackIcon from "./icons/BackIcon";
 
 const SearchBar = ({ inputFocusChanged }) => {
   const [query, setQuery] = useState("");
   const [showPanel, setShowPanel] = useState(false);
 
-  const handlePopoverToggle = () => {
+  const handleCloseClick = () => {
     setShowPanel(false);
     inputFocusChanged(false, true);
   };
@@ -37,6 +38,16 @@ const SearchBar = ({ inputFocusChanged }) => {
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.inner}`}>
+        {showPanel && (
+          <div
+            role="button"
+            className={`${styles.backButton}`}
+            onClick={handleCloseClick}
+          >
+            <BackIcon />
+          </div>
+        )}
+
         <div className={`${styles.inputWrapper}`}>
           {/* Input */}
           <form className={`${styles.form}`}>
@@ -76,13 +87,9 @@ const SearchBar = ({ inputFocusChanged }) => {
             />
           </form>
 
-          {/* Filter button */}
-          <div
-            role="button"
-            className={`${styles.button}`}
-            onClick={handlePopoverToggle}
-          >
-            Filters
+          {/* search button */}
+          <div role="button" className={`${styles.button}`}>
+            Search
           </div>
         </div>
       </div>
@@ -94,7 +101,7 @@ const SearchBar = ({ inputFocusChanged }) => {
         }}
       >
         <div className={`${styles.filters}`}>
-          <FilterPopover toggle={handlePopoverToggle} />
+          <FilterPopover />
         </div>
       </div>
     </div>
