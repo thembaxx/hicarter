@@ -87,8 +87,8 @@
   font-weight: 600;
   line-height: 1.5;
 
-  padding: 8px 20px;
-  margin-right: 8px;
+  padding: 10px 20px;
+  margin-right: 4px;
   white-space: nowrap;
 }
 
@@ -103,3 +103,4 @@
   padding-top: 78px;
   z-index: 10;
 }
+
