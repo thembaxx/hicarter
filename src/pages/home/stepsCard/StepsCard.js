@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./stepsCard.module.css";
+import { ArrowRight } from "phosphor-react";
 
 import Card from "../../../components/card/Card";
 import Step from "./Step";
@@ -14,7 +15,7 @@ const StepsCard = () => {
       <Card>
         <div className={`${styles.inner}`}>
           <div className={`${styles.heading}`}>
-            Making buying a car fun, simple and easy.
+            Empowering people in the digital economy
           </div>
           <div className={`${styles.subheading}`}>
             All it takes is <b>Three simple steps</b> to get the car of your
@@ -32,7 +33,8 @@ const StepsCard = () => {
             ))}
           </div>
           <div role="button" className={`${styles.button}`}>
-            Find out more
+            <div>Find out more</div>
+            <ArrowRight color="white" weight="bold" size={16} style={{ marginLeft: 10 }} />
           </div>
         </div>
       </Card>

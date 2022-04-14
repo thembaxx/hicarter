@@ -21,10 +21,10 @@
   text-transform: uppercase;
   line-height: 1.5;
   display: flex;
+  justify-content: center;
   font-weight: 700;
   align-items: center;
   padding: 12px 0;
-  padding-left: 15px;
   white-space: nowrap;
   text-overflow: ellipsis;
 }

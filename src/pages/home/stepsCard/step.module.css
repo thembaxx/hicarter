@@ -39,14 +39,14 @@
 
 .title {
   color: var(--primary-color);
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.125rem;
+  font-weight: 800;
   margin-bottom: 2px;
   line-height: 1.3;
 }
 
 .subtitle {
   color: var(--black-200);
-  font-size: 0.785rem;
+  font-size: 0.8rem;
   line-height: 1.3;
 }

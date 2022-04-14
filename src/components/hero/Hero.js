@@ -2,8 +2,6 @@ import React from "react";
 import styles from "./hero.module.css";
 
 import Carousel from "./carousel/Carousel";
-import CarIcon from "./icons/CarIcon";
-import GearIcon from "./icons/GearIcon";
 
 const Hero = () => {
   return (
@@ -12,9 +10,6 @@ const Hero = () => {
       <div className={`${styles.actions}`}>
         {/* Browse cars button */}
         <div role="button" className={`${styles.button} ${styles.primary}`}>
-          <div className={`${styles.icon}`}>
-            <CarIcon />
-          </div>
           <div>Browse cars</div>
         </div>
 
@@ -22,10 +17,7 @@ const Hero = () => {
 
         {/* Book service button */}
         <div role="button" className={`${styles.button} ${styles.secondary}`}>
-          <div className={`${styles.icon}`}>
-            <GearIcon />
-          </div>
-          <div>Book service</div>
+          <div>Book a service</div>
         </div>
       </div>
     </div>

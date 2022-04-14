@@ -55,11 +55,11 @@ body {
 }
 
 *::-webkit-scrollbar-track {
-  background: #cfcfcf;
+  background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba(138, 138, 138, 0.87);
+  background-color: rgba(138, 138, 138, 1);
   border-radius: 20px;
-  border: 3px solid #cfcfcf;
+  border: 3px solid white;
 }

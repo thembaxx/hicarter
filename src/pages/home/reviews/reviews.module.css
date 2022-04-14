@@ -1,6 +1,5 @@
 .container {
-  /* background-color: #f0f0f0; */
-  padding: 0px 0;
+  padding-bottom: 40px;
 }
 
 .header {
@@ -42,7 +41,7 @@
 }
 
 .vl {
-  padding: 0 15px;
+  padding: 0 10px;
 }
 
 .navButton {
