@@ -15,7 +15,7 @@ const StepsCard = () => {
       <Card>
         <div className={`${styles.inner}`}>
           <div className={`${styles.heading}`}>
-            Empowering people in the digital economy
+            Effortless car buying at your fingertips
           </div>
           <div className={`${styles.subheading}`}>
             All it takes is <b>Three simple steps</b> to get the car of your
@@ -34,7 +34,12 @@ const StepsCard = () => {
           </div>
           <div role="button" className={`${styles.button}`}>
             <div>Find out more</div>
-            <ArrowRight color="white" weight="bold" size={16} style={{ marginLeft: 10 }} />
+            <ArrowRight
+              color="white"
+              weight="bold"
+              size={16}
+              style={{ marginLeft: 10 }}
+            />
           </div>
         </div>
       </Card>

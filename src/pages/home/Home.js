@@ -21,10 +21,7 @@ const Home = () => {
         <div style={{ marginBottom: 40 }}>
           <StepsCard />
         </div>
-        <div className={`${styles.deals}`}>
-          <div className={`${styles.heading}`}>Deals of the Month</div>
-          <Deals />
-        </div>
+        <Deals />
         <Reviews />
       </div>
     </div>
