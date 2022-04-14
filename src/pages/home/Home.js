@@ -3,6 +3,7 @@ import styles from "./home.module.css";
 
 import Hero from "../../components/hero/Hero";
 import StepsCard from "./stepsCard/StepsCard";
+import Deals from "./deals/Deals";
 import Reviews from "./reviews/Reviews";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
         </div>
         <div className={`${styles.deals}`}>
           <div className={`${styles.heading}`}>Deals of the Month</div>
+          <Deals />
         </div>
         <Reviews />
       </div>

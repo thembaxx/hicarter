@@ -1,74 +1,33 @@
-import React, { useRef, useEffect, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./reviews.module.css";
 
 import Review from "./Review";
-import ChevRight from "./icons/ChevRight";
-import ChevLeft from "./icons/ChevLeft";
-
-const scrollDirection = {
-  next: "next",
-  previous: "previous",
-};
+import Carousel from "../../../components/carousel/Carousel";
 
 const Reviews = () => {
-  const transform = useRef(0);
-  const carouselRef = useRef(0);
-  const carouselWidth = useRef(0);
-  const carouselScrollWidth = useRef(0);
-
-  const handleScroll = (direction) => {
-    if (!carouselRef.current) return;
-
-    const itemWidth = 80; //80vw
-    const margin = 20; //margin-right: 20px
-
-    switch (direction) {
-      case scrollDirection.next:
-        transform.current -= (carouselWidth.current * itemWidth) / 100 + margin;
-        break;
-      case scrollDirection.previous:
-        transform.current += (carouselWidth.current * itemWidth) / 100 + margin;
-        break;
-      default:
-        transform.current = 0;
-        break;
-    }
-
-    setTransform(transform.current);
-  };
-
-  const setTransform = (value) => {
-    carouselRef?.current.scroll({
-      top: 0,
-      left: Math.abs(value),
-      behavior: "smooth",
-    });
-  };
-
-  //   ResizeObserver to handle width change.
-  const handleResizeObserver = useCallback((entries) => {
-    const entry = entries[0];
-    let width;
-
-    if (entry.contentBoxSize) {
-      // Firefox implements `contentBoxSize` as a single content rect, rather than an array
-      const contentBoxSize = Array.isArray(entry.contentBoxSize)
-        ? entry.contentBoxSize[0]
-        : entry.contentBoxSize;
-
-      width = contentBoxSize.inlineSize;
-    } else {
-      width = entry.contentRect.width;
-    }
-
-    carouselWidth.current = width;
-    carouselScrollWidth.current = carouselRef.current.scrollWidth;
-  }, []);
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const observer = new ResizeObserver(handleResizeObserver);
-    observer.observe(carouselRef?.current);
-  }, [handleResizeObserver]);
+    const getData = () => {
+      const _items = reviews.map(({ content, rating, name, date, imgUrl }) => (
+        <Review
+          content={content}
+          rating={rating}
+          name={name}
+          date={date}
+          imgUrl={imgUrl}
+        />
+      ));
+
+      setItems(_items);
+    };
+
+    getData();
+
+    return () => {
+      setItems([]);
+    };
+  }, []);
 
   return (
     <div className={`${styles.container}`}>
@@ -79,36 +38,7 @@ const Reviews = () => {
         </p>
       </div>
 
-      <div ref={carouselRef} className={`${styles.list}`}>
-        {reviews.map(({ content, rating, name, date, imgUrl }, i) => (
-          <div key={i} className={`${styles.item}`}>
-            <Review
-              content={content}
-              rating={rating}
-              name={name}
-              date={date}
-              imgUrl={imgUrl}
-            />
-          </div>
-        ))}
-      </div>
-      <div className={`${styles.nav}`}>
-        <div
-          role="button"
-          className={`${styles.navButton}`}
-          onClick={() => handleScroll(scrollDirection.previous)}
-        >
-          <ChevLeft />
-        </div>
-        <div className={`${styles.vl}`}></div>
-        <div
-          role="button"
-          className={`${styles.navButton}`}
-          onClick={() => handleScroll(scrollDirection.next)}
-        >
-          <ChevRight />
-        </div>
-      </div>
+      <Carousel items={items} />
     </div>
   );
 };

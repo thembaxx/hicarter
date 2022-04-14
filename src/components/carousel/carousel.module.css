@@ -1,0 +1,57 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 2.5rem;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.vl {
+  padding: 0 5px;
+}
+
+.navButton {
+  cursor: pointer;
+  border: 1px solid var(--black-500);
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.list {
+  padding: 0 20px 30px 20px;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: transform 500ms ease-out;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /* overflow-x: scroll; */
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  /* height: 290px; */
+  width: 80vw;
+  /* max-width: 300px; */
+  margin-right: 20px;
+  flex: 0 0 80%;
+  max-width: 80%;
+}
