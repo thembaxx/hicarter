@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./stepsCard.module.css";
-import { ArrowRight } from "phosphor-react";
+import { CaretRight } from "phosphor-react";
 
 import Card from "../../../components/card/Card";
 import Step from "./Step";
@@ -34,11 +34,10 @@ const StepsCard = () => {
           </div>
           <div role="button" className={`${styles.button}`}>
             <div>Find out more</div>
-            <ArrowRight
+            <CaretRight
               color="white"
-              weight="bold"
-              size={16}
-              style={{ marginLeft: 10 }}
+              size={14}
+              style={{ marginLeft: 5, marginTop: 1 }}
             />
           </div>
         </div>

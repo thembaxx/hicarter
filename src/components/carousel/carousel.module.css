@@ -7,14 +7,14 @@
 }
 
 .vl {
-  margin: 0 10px;
+  margin: 0 8px;
 }
 
 .navButton {
   cursor: pointer;
   border: 1px solid var(--black-500);
   background-color: white;
-  border-radius: 100%;
+  border-radius: 16px;
   height: 40px;
   width: 40px;
   display: flex;
@@ -32,7 +32,8 @@
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  transition: transform 500ms ease-out;
+  /* transition: transform 700ms ease; */
+  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;

@@ -1,21 +1,56 @@
 import React from "react";
 import styles from "./home.module.css";
+import { Plus, CaretDown } from "phosphor-react";
 
 import Hero from "../../components/hero/Hero";
 import StepsCard from "./stepsCard/StepsCard";
 import Deals from "./deals/Deals";
 import Reviews from "./reviews/Reviews";
+import About from "./about/About";
 
 const Home = () => {
   return (
     <div className={`${styles.container}`}>
+      <div className={`${styles.assistant}`}>
+        <div className={`${styles.heading}`}>What are you looking for?</div>
+        <p className={`${styles.subheading}`}>
+          Let us help you find the right car for your needs.
+        </p>
+        <div className={`${styles.tags}`}>
+          <div className={`${styles.tag}`}>Fuel efficient</div>
+          <div className={`${styles.tag}`}>2 4oor</div>
+          <div className={`${styles.tag}`}>4 Door</div>
+          <div className={`${styles.tag}`}>Sedan</div>
+          <div className={`${styles.tag}`}>Utitlity</div>
+          <div className={`${styles.tag}`}>Auto</div>
+          <div className={`${styles.tag}`}>Manual</div>
+          <div className={`${styles.tag}`}>Used</div>
+        </div>
+        <div role="button" className={`${styles.button}`}>
+          <Plus color="white" weight="bold" size={16} />
+          <div style={{ marginLeft: 10 }}>More filters</div>
+        </div>
+        <hr className={`${styles.hr}`} />
+        <form>
+          <div role="button" className={`${styles.dropdown}`}>
+            <div>Brand (Optional)</div>
+            <CaretDown size={18} />
+          </div>
+          <div role="button" className={`${styles.dropdown}`}>
+            <div>Model (Optional)</div>
+            <CaretDown size={18} />
+          </div>
+          <div className={`${styles.submit}`}>Search 12, 234 cars</div>
+        </form>
+      </div>
       <Hero />
-      <div
+      <div className={`${styles.main}`}
         style={{
           backgroundColor: "white",
           position: "relative",
           zIndex: 15,
           paddingTop: 1,
+
         }}
       >
         <div style={{ marginBottom: 40 }}>
@@ -23,6 +58,7 @@ const Home = () => {
         </div>
         <Deals />
         <Reviews />
+        <About />
       </div>
     </div>
   );

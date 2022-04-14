@@ -33,7 +33,7 @@
 .inputWrapper {
   flex-grow: 1;
   background-color: white;
-  border-radius: 9999px;
+  border-radius: 16px;
   height: 48px;
 
   display: flex;
@@ -79,7 +79,7 @@
 
 .button {
   background-color: var(--primary-color);
-  border-radius: 9999px;
+  border-radius: 16px;
   color: white;
   cursor: pointer;
 
