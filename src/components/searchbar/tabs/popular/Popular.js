@@ -47,7 +47,7 @@ const fakeData = [
     stock: 8,
   },
   {
-    name: "Renault Kwid",
+    name: "Renault Kwid—from R 2, 899",
     stock: 12,
   },
   {

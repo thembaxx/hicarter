@@ -81,7 +81,7 @@ const SearchBar = ({ inputFocusChanged }) => {
               value={query}
               onFocus={handleInputFocusChange}
               onBlur={handleInputFocusChange}
-              placeholder="Search"
+              placeholder="Search..."
               spellCheck={false}
               autoComplete="off"
             />

@@ -17,13 +17,14 @@ const Home = () => {
           Let us help you find the right car for your needs.
         </p>
         <div className={`${styles.tags}`}>
-          <div className={`${styles.tag}`}>Fuel efficient</div>
-          <div className={`${styles.tag}`}>2 4oor</div>
+          <div className={`${styles.tag}`}>Budget</div>
+          <div className={`${styles.tag}`}>Performance</div>
+          <div className={`${styles.tag}`}>Balanced</div>
+          <div className={`${styles.tag}`}>2 Door</div>
           <div className={`${styles.tag}`}>4 Door</div>
-          <div className={`${styles.tag}`}>Sedan</div>
-          <div className={`${styles.tag}`}>Utitlity</div>
           <div className={`${styles.tag}`}>Auto</div>
           <div className={`${styles.tag}`}>Manual</div>
+          <div className={`${styles.tag}`}>New</div>
           <div className={`${styles.tag}`}>Used</div>
         </div>
         <div role="button" className={`${styles.button}`}>
@@ -46,7 +47,7 @@ const Home = () => {
             </div>
             <CaretDown size={18} />
           </div>
-          <div className={`${styles.submit}`}>Search 12, 234 cars</div>
+          <div className={`${styles.submit}`}>Browse 12, 234 cars</div>
         </form>
       </div>
       <Hero />
