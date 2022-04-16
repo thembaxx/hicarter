@@ -18,15 +18,15 @@
 }
 
 .headline {
-  color: var(--primary-color);
-  font-size: 0.75rem;
-  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--black-100);
+  margin-bottom: 20px;
   line-height: 1.5;
-  font-weight: 800;
 }
 
 .subheading {
-  color: var(--black);
+  color: var(--primary-color);
   font-weight: 700;
   line-height: 1.4;
   font-size: 1.125rem;
@@ -57,4 +57,26 @@
   align-items: center;
   justify-content: center;
   margin-top: 25px;
+}
+
+.awards {
+  padding: 40px 20px 0 20px;
+}
+
+.award {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  align-items: flex-start;
+
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  padding: 8px 0;
+}
+
+.award span {
+  margin-left: 12px;
+  margin-top: 2px;
 }

@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./about.module.css";
-import { CaretRight } from "phosphor-react";
+import { CaretRight, Medal } from "phosphor-react";
 
 const About = () => {
   return (
     <div className={`${styles.about}`}>
       <div className={`${styles.header}`}>
-        <div className={`${styles.headline}`}>who are we</div>
+        <div className={`${styles.headline}`}>About us</div>
         <p className={`${styles.subheading}`}>
           Since 2016, we have aimed to create a transparent, helpful and
           friendly experience for all our customers.
@@ -25,6 +25,21 @@ const About = () => {
           style={{ marginLeft: 5, marginTop: 1 }}
           size={14}
         />
+      </div>
+      <div className={`${styles.awards}`}>
+        <div className={`${styles.headline}`}>Awards</div>
+        <div className={`${styles.award}`}>
+          <Medal size={24} color="var(--secondary-color)" weight="fill" />
+          <span>
+            2020 | Renault Dealer of the Year (Carter Renault Melrose)
+          </span>
+        </div>
+        <div className={`${styles.award}`}>
+          <Medal size={24} color="var(--secondary-color)" weight="fill" />
+          <span>
+            2021 | Renault Dealer of the Year (Carter Renault Springfield)
+          </span>
+        </div>
       </div>
     </div>
   );

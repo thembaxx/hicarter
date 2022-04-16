@@ -8,9 +8,11 @@ const Faq = () => {
       <div className={`${styles.header}`}>Frequently asked questions</div>
       <div className={`${styles.list}`}>
         {items.map(({ title }, i) => (
-          <div className={`${styles.item}`}>
+          <div key={i} className={`${styles.item}`}>
             <div className={`${styles.title}`}>{title}</div>
-            <Plus size={18} color="var(--primary-color)" weight="fill" />
+            <div>
+              <Plus size={12} color="var(--primary-color)" weight="bold" />
+            </div>
           </div>
         ))}
       </div>

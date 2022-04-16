@@ -51,7 +51,6 @@ const Navbar = ({ toggleScroll }) => {
             </div>
           </div>
         )}
-        {!isMenuOpen && <div className={`${styles.vl}`}></div>}
 
         {/* Hamburgur menu */}
         {!isMenuOpen && (

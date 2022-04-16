@@ -1,12 +1,12 @@
 .container {
   margin-top: 40px;
-  padding: 0 20px;
+  padding: 0 20px 40px 20px;
   margin-bottom: 20px;
 }
 
 .header {
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
