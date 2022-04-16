@@ -12,6 +12,13 @@ const Slide = ({ active, headline, subheadline, img, action }) => {
     );
   }, [active]);
 
+  useEffect(() => {
+    return () => {
+      setAnimationClass(`${styles.unanimate}`);
+      setImageAnimation(`${styles.imgUnanimate}`);
+    };
+  }, []);
+
   return (
     <div
       className={`${styles.container}`}

@@ -13,6 +13,7 @@ const swipeDirection = {
 };
 
 const Carousel = ({ items }) => {
+  const [slides, setSlides] = useState([]);
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
   const intervalId = useRef(null);
@@ -66,7 +67,6 @@ const Carousel = ({ items }) => {
   };
 
   const handleScroll = (direction) => {
-    console.log(direction);
     switch (direction) {
       case swipeDirection.left:
         if (index === 0) {
@@ -105,7 +105,7 @@ const Carousel = ({ items }) => {
     return () => {
       resetTimer();
     };
-  }, [index]);
+  }, [index, items]);
 
   useEffect(() => {
     if (progress >= 100) {
@@ -116,12 +116,21 @@ const Carousel = ({ items }) => {
   }, [progress, items.length]);
 
   useEffect(() => {
+    const data = [...items];
+    for (let i = 0; i < data.length; i++) {
+      let item = Object.assign({}, data[i]);
+      data[i] = item;
+    }
+
+    setSlides(data);
+
     return () => {
       setIndex(0);
+      setSlides([]);
       intervalId.current = null;
       resetTimer();
     };
-  }, []);
+  }, [items]);
 
   return (
     <div className={`${styles.container}`}>
@@ -143,8 +152,9 @@ const Carousel = ({ items }) => {
 
         {/* items */}
         <div className={`${styles.list}`}>
-          {items.map(({ action, headline, subheadline, img, route }, i) => (
+          {slides.map(({ action, headline, subheadline, img }, i) => (
             <Slide
+              key={i}
               active={index === i}
               headline={headline}
               subheadline={subheadline}
@@ -160,7 +170,6 @@ const Carousel = ({ items }) => {
           className={`${styles.navButton} ${styles.navRight}`}
           onClick={() => handleScroll(swipeDirection.right)}
           onTouchEnd={(e) => {
-            console.log("clicked");
             handleScroll(swipeDirection.right);
           }}
         >
