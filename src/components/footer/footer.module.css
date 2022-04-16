@@ -1,11 +1,8 @@
 .container {
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #e9ecf6;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  padding: 30px 20px;
+  padding: 30px 20px 0 20px;
+  width: 100%;
 }
 
 .socialNetworks {
@@ -20,34 +17,48 @@
   align-items: center;
   justify-content: center;
 
-  height: 44px;
-  width: 44px;
+  margin-right: 12px;
 }
 
 .links {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 16px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.linksInner {
+  display: flex;
+  flex-direction: column;
 }
 
 .link {
-  color: var(--black-100);
+  color: var(--primary-color);
 
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
 
   margin-right: 8px;
 
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .copyright {
   font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--black-200);
+
+  margin-top: 40px;
+}
+
+.registration {
+  border-top: 1px solid #d4d9ec;
+
+  font-size: 0.75rem;
   line-height: 1.5;
   color: var(--black-500);
 
-  margin-top: 8px;
-  text-align: center;
+  margin-top: 24px;
+  padding: 8px 0;
 }
