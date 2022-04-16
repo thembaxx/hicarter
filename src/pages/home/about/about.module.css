@@ -64,11 +64,10 @@
 }
 
 .award {
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
-
   display: flex;
   align-items: flex-start;
 
+  color: var(--black-200);
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.4;

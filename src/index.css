@@ -26,13 +26,12 @@
 }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   font-family: "Mulish", sans-serif;
-  height: 100vh;
-  width: 100vw;
+  /* height: 100vh;
+  width: 100vw; */
   overscroll-behavior-x: none;
   scroll-behavior: smooth;
-  /* Debug */
   overflow-x: hidden;
 }
 
@@ -42,7 +41,35 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   overscroll-behavior-x: none; */
+
   scroll-behavior: smooth;
+}
+
+.comm {
+  background-color: var(--primary-color);
+  border-radius: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+  width: 48px;
+
+  margin: 24px;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.comm svg {
+  fill: white;
+  height: 24px;
+  width: 24px;
 }
 
 .hidescrollbar {

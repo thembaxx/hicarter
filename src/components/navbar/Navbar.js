@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import styles from "./navbar.module.css";
 
 import Menu from "./menu/Menu";
-import ChatIcon from "./icons/ChatIcon";
 import MenuIcon from "./icons/MenuIcon";
 import CloseIcon from "./icons/CloseIcon";
 
@@ -43,16 +42,6 @@ const Navbar = ({ toggleScroll }) => {
 
       {/* Right commands */}
       <div className={`${styles.rightCommands}`}>
-        {/* Chat icon */}
-        {!isMenuOpen && (
-          <div className={`${styles.button}`} role="button">
-            <div className={`${styles.chat}`}>
-              <ChatIcon />
-            </div>
-          </div>
-        )}
-
-        {/* Hamburgur menu */}
         {!isMenuOpen && (
           <div
             className={`${styles.button}`}

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./home.module.css";
-import { Plus, CaretDown, CaretUp } from "phosphor-react";
+import { Plus, CaretDown } from "phosphor-react";
 
 import Hero from "../../components/hero/Hero";
 import StepsCard from "./stepsCard/StepsCard";
@@ -12,7 +12,7 @@ import Faq from "./faq/Faq";
 const Home = () => {
   return (
     <div className={`${styles.container}`}>
-      <div id="assistant" className={`${styles.assistant}`}>
+      <div className={`${styles.assistant}`}>
         <div className={`${styles.heading}`}>What are you looking for?</div>
         <p className={`${styles.subheading}`}>
           Let us help you find the right car for your needs.
@@ -69,10 +69,6 @@ const Home = () => {
         <About />
         <Faq />
       </div>
-
-      <a href="#assistant" className={`${styles.assistButton}`}>
-        <CaretUp size={18} color="var(--primary-color)" weight="fill" />
-      </a>
     </div>
   );
 };
