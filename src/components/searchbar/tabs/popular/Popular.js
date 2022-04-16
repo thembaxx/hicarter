@@ -21,7 +21,7 @@ const Popular = () => {
   }, []);
 
   return (
-    <div>
+    <div className={`${styles.container}`}>
       <Header title="Popular vehicles" action={{ name: "See all" }} />
 
       <div className={`${styles.list}`}>

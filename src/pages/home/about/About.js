@@ -19,9 +19,9 @@ const About = () => {
         trust-based relationships with our customers.
       </p>
       <div className={`${styles.button}`} role="button">
-        <div>Our story</div>
+        <div>Read our story</div>
         <CaretRight
-          color="black"
+          color="white"
           style={{ marginLeft: 5, marginTop: 1 }}
           size={14}
         />

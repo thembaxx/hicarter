@@ -21,8 +21,8 @@ const Brands = () => {
   }, []);
 
   return (
-    <div>
-      <Header title="Popular vehicles" action={{ name: "See all" }} />
+    <div className={`${styles.container}`}>
+      <Header title="Popular vehicles" action={{ name: "View all " }} />
 
       <div className={`${styles.list}`}>
         {items.map(({ name, iconUrl }, i) => (
@@ -31,7 +31,7 @@ const Brands = () => {
               <div className={`${styles.icon}`}>
                 <img src={iconUrl} alt={name} />
               </div>
-              <span className={`${styles.name}`}>({name})</span>
+              <span className={`${styles.name}`}>{name}</span>
             </div>
             <div role="button">
               <ChevRightIcon />
@@ -46,47 +46,47 @@ const Brands = () => {
 const fakeData = [
   {
     name: "BMW",
-    iconUrl: "/brands/bmw.png",
+    iconUrl: "/brands/bmw.svg",
   },
   {
     name: "Ford",
-    iconUrl: "/brands/ford.png",
-  },
-  {
-    name: "Haval",
-    iconUrl: "/brands/haval.png",
+    iconUrl: "/brands/ford.svg",
   },
   {
     name: "Hyundai",
-    iconUrl: "/brands/hyundai.png",
+    iconUrl: "/brands/hyundai.svg",
   },
   {
     name: "Isuzu",
-    iconUrl: "/brands/isuzu.png",
+    iconUrl: "/brands/isuzu.svg",
   },
   {
     name: "Kia",
-    iconUrl: "/brands/kia.png",
+    iconUrl: "/brands/kia.svg",
+  },
+  {
+    name: "Mercedes",
+    iconUrl: "/brands/mercedes.svg",
   },
   {
     name: "Mitsubishi",
-    iconUrl: "/brands/mitsubishi.png",
+    iconUrl: "/brands/mitsubishi.svg",
   },
   {
     name: "Nissan",
-    iconUrl: "/brands/nissan.png",
+    iconUrl: "/brands/nissan.svg",
   },
   {
     name: "Renault",
-    iconUrl: "/brands/renault.png",
+    iconUrl: "/brands/renault.svg",
   },
   {
     name: "Toyota",
-    iconUrl: "/brands/toyota.png",
+    iconUrl: "/brands/toyota.svg",
   },
   {
     name: "Volkswagen",
-    iconUrl: "/brands/volkswagen.png",
+    iconUrl: "/brands/volkswagen.svg",
   },
 ];
 
