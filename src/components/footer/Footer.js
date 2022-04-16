@@ -8,13 +8,13 @@ const Footer = () => {
     <div className={`${styles.container}`}>
       <div className={`${styles.socialNetworks}`}>
         <div className={`${styles.socialItem}`}>
-          <FacebookLogo size={24} color="var(--black-200)" weight="fill" />
+          <FacebookLogo size={24} color="rgba(0,0,0,0.4)" weight="fill" />
         </div>
         <div className={`${styles.socialItem}`}>
-          <LinkedinLogo size={24} color="var(--black-200)" weight="fill" />
+          <LinkedinLogo size={24} color="rgba(0,0,0,0.4)" weight="fill" />
         </div>
         <div className={`${styles.socialItem}`}>
-          <TwitterLogo size={24} color="var(--black-200)" weight="fill" />
+          <TwitterLogo size={24} color="rgba(0,0,0,0.4)" weight="fill" />
         </div>
       </div>
       <div className={`${styles.links}`}>
