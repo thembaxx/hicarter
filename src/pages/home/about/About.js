@@ -24,13 +24,21 @@ const About = () => {
       <div className={`${styles.awards}`}>
         <div className={`${styles.headline}`}>Awards</div>
         <div className={`${styles.award}`}>
-          <Medal size={24} color="var(--secondary-color)" />
+          <Medal
+            size={24}
+            color="var(--secondary-color)"
+            style={{ marginTop: 2 }}
+          />
           <span>
             <b>2020</b> | Renault Dealer of the Year (Carter Renault Melrose)
           </span>
         </div>
         <div className={`${styles.award}`}>
-          <Medal size={24} color="var(--secondary-color)" />
+          <Medal
+            size={24}
+            color="var(--secondary-color)"
+            style={{ marginTop: 2 }}
+          />
           <span>
             <b>2021</b> | Renault Dealer of the Year (Carter Renault
             Springfield)
