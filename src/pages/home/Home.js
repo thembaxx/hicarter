@@ -53,15 +53,7 @@ const Home = () => {
         </form>
       </div>
       <Hero />
-      <div
-        className={`${styles.main}`}
-        style={{
-          backgroundColor: "white",
-          position: "relative",
-          zIndex: 15,
-          paddingTop: 1,
-        }}
-      >
+      <div className={`${styles.main}`}>
         <div style={{ backgroundColor: "white" }}>
           <div style={{ marginBottom: 40 }}>
             <StepsCard />

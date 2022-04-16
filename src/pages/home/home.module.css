@@ -5,6 +5,11 @@
 .main {
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+
+  background-color: white;
+  position: relative;
+  z-index: 15;
+  padding-top: 1px;
 }
 
 .assistant {
