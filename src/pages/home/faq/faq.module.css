@@ -1,12 +1,13 @@
 .container {
   margin-top: 40px;
-  padding: 0 20px 40px 20px;
+  padding-bottom: 40px;
   margin-bottom: 20px;
 }
 
 .header {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 700;
+  padding: 0 20px;
   margin-bottom: 20px;
 }
 
@@ -15,13 +16,54 @@
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.5;
+
+  padding: 6px 0;
+}
+
+.head {
+  cursor: pointer;
+
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 
-  padding: 8px 0;
+  padding: 0 20px;
 }
 
 .title {
-  flex-grow: 1;
   margin-right: 16px;
+}
+
+.icon {
+  margin-top: 2px;
+}
+
+/* Content */
+.content {
+  background-color: #fafafa;
+
+  color: var(--black-200);
+  font-size: 0.875rem;
+  font-weight: 500;
+
+  margin-top: 8px;
+  padding: 20px 20px;
+}
+
+.meta {
+  display: flex;
+  align-items: top;
+  margin-top: 8px;
+}
+
+.meta a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.email {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 12px;
+  padding-top: 12px;
 }

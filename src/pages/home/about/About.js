@@ -29,15 +29,16 @@ const About = () => {
       <div className={`${styles.awards}`}>
         <div className={`${styles.headline}`}>Awards</div>
         <div className={`${styles.award}`}>
-          <Medal size={24} color="var(--secondary-color)" weight="fill" />
+          <Medal size={24} color="var(--black-200)" weight="fill" />
           <span>
-            2020 | Renault Dealer of the Year (Carter Renault Melrose)
+            <b>2020</b> | Renault Dealer of the Year (Carter Renault Melrose)
           </span>
         </div>
         <div className={`${styles.award}`}>
-          <Medal size={24} color="var(--secondary-color)" weight="fill" />
+          <Medal size={24} color="var(--black-200)" weight="fill" />
           <span>
-            2021 | Renault Dealer of the Year (Carter Renault Springfield)
+            <b>2021</b> | Renault Dealer of the Year (Carter Renault
+            Springfield)
           </span>
         </div>
       </div>
