@@ -12,9 +12,9 @@
 
 .navButton {
   cursor: pointer;
-  border: 1px solid var(--black-500);
+  border: 1px solid var(--black-900);
   background-color: white;
-  border-radius: 16px;
+  border-radius: 100%;
   height: 40px;
   width: 40px;
   display: flex;

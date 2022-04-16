@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./about.module.css";
-import { CaretRight, Medal } from "phosphor-react";
+import { Medal } from "phosphor-react";
 
 const About = () => {
   return (
@@ -20,22 +20,17 @@ const About = () => {
       </p>
       <div className={`${styles.button}`} role="button">
         <div>Read our story</div>
-        <CaretRight
-          color="var(--black-200)"
-          style={{ marginLeft: 5, marginTop: 1 }}
-          size={14}
-        />
       </div>
       <div className={`${styles.awards}`}>
         <div className={`${styles.headline}`}>Awards</div>
         <div className={`${styles.award}`}>
-          <Medal size={24} color="var(--black-200)" />
+          <Medal size={24} color="var(--secondary-color)" />
           <span>
             <b>2020</b> | Renault Dealer of the Year (Carter Renault Melrose)
           </span>
         </div>
         <div className={`${styles.award}`}>
-          <Medal size={24} color="var(--black-200)" />
+          <Medal size={24} color="var(--secondary-color)" />
           <span>
             <b>2021</b> | Renault Dealer of the Year (Carter Renault
             Springfield)

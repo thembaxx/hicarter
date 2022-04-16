@@ -89,7 +89,10 @@ const Deals = () => {
 
   return (
     <div className={`${styles.container}`}>
-      <div className={`${styles.heading}`}>Deals of the Month</div>
+      <div className={`${styles.heading}`}>
+        <div>Deals of the Month</div>
+        <div role='button' className={`${styles.headerButton}`}>View all</div>
+      </div>
 
       <Carousel items={deals} />
     </div>

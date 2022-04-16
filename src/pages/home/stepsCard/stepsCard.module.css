@@ -4,7 +4,7 @@
 }
 
 .inner {
-  color: var(--black-200);
+  color: var(--black-100);
   padding: 15px 20px 15px 20px;
 }
 
@@ -46,5 +46,6 @@
 }
 
 .button:hover {
-  background-color: var(--blue-dark);
+  background-color: var(--primary-color);
+  color: white;
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./searchBar.module.css";
+import { X } from "phosphor-react";
 
-import BackIcon from "./icons/BackIcon";
 import Tabs from "./tabs/Tabs";
 
 const SearchBar = ({ inputFocusChanged }) => {
@@ -44,7 +44,7 @@ const SearchBar = ({ inputFocusChanged }) => {
             className={`${styles.backButton}`}
             onClick={handleCloseClick}
           >
-            <BackIcon />
+            <X size={18} color="#ffffff" />
           </div>
         )}
 
