@@ -29,6 +29,7 @@
 }
 
 .icon {
+  height: 32px;
   width: 32px;
   display: flex;
   align-items: center;
@@ -36,7 +37,7 @@
 }
 
 .icon img {
-  height: auto;
+  height: 100%;
   width: 100%;
   object-fit: contain;
 }
