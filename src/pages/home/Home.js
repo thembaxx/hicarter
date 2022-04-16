@@ -1,12 +1,13 @@
 import React from "react";
 import styles from "./home.module.css";
-import { Plus, CaretDown, Sparkle } from "phosphor-react";
+import { Plus, CaretDown, CaretUp } from "phosphor-react";
 
 import Hero from "../../components/hero/Hero";
 import StepsCard from "./stepsCard/StepsCard";
 import Deals from "./deals/Deals";
 import Reviews from "./reviews/Reviews";
 import About from "./about/About";
+import Faq from "./faq/Faq";
 
 const Home = () => {
   return (
@@ -66,10 +67,11 @@ const Home = () => {
         <Deals />
         <Reviews />
         <About />
+        <Faq />
       </div>
 
       <a href="#assistant" className={`${styles.assistButton}`}>
-        <Sparkle size={18} color="var(--primary-color)" weight="fill" />
+        <CaretUp size={18} color="var(--primary-color)" weight="fill" />
       </a>
     </div>
   );
