@@ -54,7 +54,10 @@ const items = [
       </span>
     ),
     img: "https://www.renault.co.za/CountriesData/South_Africa/images/DigitalSA/Duster/TechRoad/Duster-TechRoad-3Q-Rear-Coast-Blue_ig_w800_h450.jpg",
-    route: "",
+    action: {
+      title: "learn more",
+      route: "/",
+    },
   },
   {
     headline: (
