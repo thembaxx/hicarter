@@ -120,7 +120,7 @@ const data = [
               <MapPin
                 size={16}
                 color="var(--black-200)"
-                style={{ marginTop: 1 }}
+                style={{ marginTop: 2 }}
               />
             </div>
             <div style={{ marginLeft: 8 }}>65 Corlett Drive, Birnam</div>
@@ -130,7 +130,7 @@ const data = [
               <Phone
                 size={16}
                 color="var(--black-200)"
-                style={{ marginTop: 1 }}
+                style={{ marginTop: 2 }}
               />
             </div>
             <a href="tel:+27100452682" style={{ marginLeft: 8 }}>
@@ -147,7 +147,7 @@ const data = [
               <MapPin
                 size={16}
                 color="var(--black-200)"
-                style={{ marginTop: 1 }}
+                style={{ marginTop: 2 }}
               />
             </div>
             <div style={{ marginLeft: 8 }}>
@@ -159,7 +159,7 @@ const data = [
               <Phone
                 size={16}
                 color="var(--black-200)"
-                style={{ marginTop: 1 }}
+                style={{ marginTop: 2 }}
               />
             </div>
             <a href="tel:+27310450500" style={{ marginLeft: 8 }}>
