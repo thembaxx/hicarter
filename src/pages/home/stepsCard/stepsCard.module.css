@@ -29,13 +29,12 @@
 
 .button {
   cursor: pointer;
-  background-color: var(--primary-color);
-  color: white;
-  border: 1px solid var(--black-800);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 1rem;
   font-size: 0.75rem;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;

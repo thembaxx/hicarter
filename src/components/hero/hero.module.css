@@ -1,7 +1,7 @@
 .container {
   position: sticky;
   position: -webkit-sticky;
-  top: 152px;
+  top: 130px;
   z-index: 10;
 }
 
