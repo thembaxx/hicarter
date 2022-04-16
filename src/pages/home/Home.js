@@ -62,13 +62,15 @@ const Home = () => {
           paddingTop: 1,
         }}
       >
-        <div style={{ marginBottom: 40 }}>
-          <StepsCard />
+        <div style={{ backgroundColor: "white" }}>
+          <div style={{ marginBottom: 40 }}>
+            <StepsCard />
+          </div>
+          <Deals />
+          <Reviews />
+          <About />
+          <Faq />
         </div>
-        <Deals />
-        <Reviews />
-        <About />
-        <Faq />
         <Footer />
       </div>
     </div>

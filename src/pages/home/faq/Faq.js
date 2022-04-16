@@ -103,7 +103,7 @@ const data = [
     ),
   },
   {
-    title: "Where are our Carter dealershipts and how can you cantact us?",
+    title: "Where are our Carter dealerships and how can you cantact us?",
     content: (
       <div className={`${styles.content}`}>
         <div>
@@ -251,7 +251,7 @@ const data = [
     ),
   },
   {
-    title: "Why is my installment different frrom the advetised amount?",
+    title: "Why is my installment different frrom the advertised amount?",
     content: (
       <div className={`${styles.content}`}>
         <div>
