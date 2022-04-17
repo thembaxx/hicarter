@@ -13,7 +13,7 @@ const Header = () => {
           <div>
             <span style={{ marginRight: 4 }}>Choose Brand</span>
             <span style={{ opacity: 0.67, fontWeight: 400 }}>
-              (BMW, Renault, Toyota etc.)
+              (Renault, Toyota etc.)
             </span>
           </div>
           <CaretDown size={18} />
