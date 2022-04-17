@@ -8,7 +8,7 @@ const MenuItem = ({ name, Icon }) => {
       <div className={`${styles.title}`}>
         {Icon && (
           <div className={`${styles.icon}`}>
-            <Icon size={24} />
+            <Icon size={28} />
           </div>
         )}
         <div>{name}</div>
