@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./review.module.css";
-
-import StarIcon from "./icons/StarIcon";
+import { Star } from "phosphor-react";
 
 const Review = ({ content, rating, name, date, imgUrl }) => {
   let starRating = rating ? Math.trunc(rating) : 0;
@@ -11,7 +10,7 @@ const Review = ({ content, rating, name, date, imgUrl }) => {
     <div className={`${styles.container}`}>
       <div className={`${styles.rating}`}>
         {stars.map((_, i) => (
-          <StarIcon key={i} />
+          <Star size={12} weight="fill" />
         ))}
       </div>
       <div className={`${styles.paragraph}`}>{content}</div>
