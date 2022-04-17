@@ -81,13 +81,11 @@ const menuItems = [
   {
     name: "Home",
     route: "/",
-    // Icon: CarIcon,
     Icon: House,
   },
   {
     name: "Browse cars",
     route: "/",
-    // Icon: CarIcon,
     Icon: Car,
   },
   {
