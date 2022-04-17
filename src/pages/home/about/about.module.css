@@ -2,7 +2,7 @@
   background-color: var(--black);
   width: 100%;
   margin-top: 40px;
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -54,11 +54,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
 .awards {
-  padding: 40px 20px 0 20px;
+  padding: 0 20px;
 }
 
 .award {

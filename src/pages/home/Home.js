@@ -14,11 +14,13 @@ const Home = () => {
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.assistant}`}>
-        <div className={`${styles.heading}`}>What are you looking for?</div>
-        <p className={`${styles.subheading}`}>
+        <div className={`${styles.heading}`}>
+          Find the right car for your needs
+        </div>
+        {/* <p className={`${styles.subheading}`}>
           Let us help you find the right car for your needs.
-        </p>
-        <div className={`${styles.tags}`}>
+        </p> */}
+        {/* <div className={`${styles.tags}`}>
           <div className={`${styles.tag}`}>Budget</div>
           <div className={`${styles.tag}`}>Performance</div>
           <div className={`${styles.tag}`}>Balanced</div>
@@ -28,26 +30,27 @@ const Home = () => {
           <div className={`${styles.tag}`}>Manual</div>
           <div className={`${styles.tag}`}>New</div>
           <div className={`${styles.tag}`}>Used</div>
-        </div>
-        <div role="button" className={`${styles.button}`}>
-          <Plus color="white" weight="bold" size={16} />
-          <div style={{ marginLeft: 10 }}>More filters</div>
-        </div>
-        <hr className={`${styles.hr}`} />
+        </div> */}
+
+        {/* <hr className={`${styles.hr}`} /> */}
         <form>
           <div role="button" className={`${styles.dropdown}`}>
             <div>
               Brand{" "}
-              <span style={{ opacity: 0.67, fontWeight: 400 }}>(Optional)</span>
+              {/* <span style={{ opacity: 0.67, fontWeight: 400 }}>(Optional)</span> */}
             </div>
             <CaretDown size={18} />
           </div>
           <div role="button" className={`${styles.dropdown}`}>
             <div>
               Model{" "}
-              <span style={{ opacity: 0.67, fontWeight: 400 }}>(Optional)</span>
+              {/* <span style={{ opacity: 0.67, fontWeight: 400 }}>(Optional)</span> */}
             </div>
             <CaretDown size={18} />
+          </div>
+          <div role="button" className={`${styles.button}`}>
+            <Plus color="white" weight="bold" size={16} />
+            <div style={{ marginLeft: 10 }}>More filters</div>
           </div>
           <div className={`${styles.submit}`}>Browse 12, 234 cars</div>
         </form>

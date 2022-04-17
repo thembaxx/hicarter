@@ -18,9 +18,15 @@ const About = () => {
         that we better serve our customers as a team and strive to build
         trust-based relationships with our customers.
       </p>
-      <div className={`${styles.button}`} role="button">
-        <div>Read our story</div>
-      </div>
+      <div
+        style={{
+          height: 1,
+          width: "100%",
+          backgroundColor: "white",
+          opacity: 0.1,
+          margin: "20px 0",
+        }}
+      ></div>
       <div className={`${styles.awards}`}>
         <div className={`${styles.headline}`}>Awards</div>
         <div className={`${styles.award}`}>
@@ -44,6 +50,9 @@ const About = () => {
             Springfield)
           </span>
         </div>
+      </div>
+      <div className={`${styles.button}`} role="button">
+        <div>Read our story</div>
       </div>
     </div>
   );

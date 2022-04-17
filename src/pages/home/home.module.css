@@ -18,17 +18,17 @@
 }
 
 .heading {
-  font-size: 1.25rem;
-  font-weight: 800;
+  font-size: 1rem;
+  font-weight: 700;
   line-height: 1.5;
   color: white;
-  margin-bottom: 0px;
+  margin-bottom: 16px;
 }
 
 .subheading {
   font-size: 0.875rem;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .tags {
@@ -80,14 +80,15 @@
 }
 
 .submit {
-  background-color: #5265b3;
-  border-radius: 5px;
+  /* background-color: #5265b3; */
+  border: 2px solid white;
+  border-radius: 16px;
   color: white;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 1.5;
-  margin-top: 15px;
-  padding: 15px 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 24px;
+  padding: 14px 20px;
   width: 100%;
   display: flex;
   align-items: center;
