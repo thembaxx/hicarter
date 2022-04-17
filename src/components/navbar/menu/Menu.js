@@ -12,12 +12,6 @@ import {
   LinkedinLogo,
 } from "phosphor-react";
 
-// import CarIcon from "../icons/CarIcon";
-// import LocationIcon from "../icons/LocationIcon";
-// import CarServiceIcon from "../icons/CarServiceIcon";
-// import PhoneIcon from "../icons/PhoneIcon";
-// import BlogIcon from "../icons/BlogIcon";
-
 import MenuItem from "./MenuItem";
 
 const Menu = () => {
