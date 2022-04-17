@@ -46,21 +46,15 @@ const Menu = () => {
               weight="fill"
             />
           </div>
-          <div>
-            <a
-              href="mailto:hello@heycarter.co.za"
-              className={`${styles.email}`}
-            >
-              hello@heycarter.co.za
-            </a>
+          <div className={`${styles.email}`}>
+            <a href="mailto:hello@heycarter.co.za">hello@heycarter.co.za</a>
           </div>
-          <div>
-            <a href="tel:+27100452682" className={`${styles.tel}`}>
-              +27 (031) 045 2682
-            </a>
+          <div className={`${styles.tel}`}>
+            <a href="tel:+27100452682">+27 (031) 045 2682</a>
           </div>
         </div>
         <div>
+          <div className={`${styles.addressTitle}`}>Directions</div>
           <div className={`${styles.address}`}>
             65 Corlet Dr <br /> Johanessburg <br /> 2196
           </div>
