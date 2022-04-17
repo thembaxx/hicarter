@@ -16,7 +16,7 @@ const Menu = () => {
       <div className={`${styles.list}`}>
         {menuItems.map(({ name, route, Icon, items }, i) => (
           <div key={i}>
-            <MenuItem name={name} route={route} Icon={Icon} subItems={items} />
+            <MenuItem name={name} route={route} Icon={Icon} />
           </div>
         ))}
       </div>
@@ -26,50 +26,14 @@ const Menu = () => {
 
 const menuItems = [
   {
-    name: "Vehicles",
+    name: "Browse cars",
     route: "/",
     Icon: CarIcon,
-    items: [
-      {
-        name: "Popular",
-        route: "/",
-      },
-      {
-        name: "New cars",
-        route: "/",
-      },
-      {
-        name: "Used cars",
-        route: "/",
-      },
-      {
-        name: "Newest stock",
-        route: "/",
-      },
-      {
-        name: "Oldest stock",
-        route: "/",
-      },
-      {
-        name: "Brands",
-        route: "/",
-      },
-    ],
   },
   {
-    name: "Locate Dealerships",
+    name: "Our Dealerships",
     route: "/",
     Icon: LocationIcon,
-    items: [
-      {
-        name: "Mitsubishi dealerships",
-        route: "/",
-      },
-      {
-        name: "Renault dealerships",
-        route: "/",
-      },
-    ],
   },
   {
     name: "Book a Service",

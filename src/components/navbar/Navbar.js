@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import styles from "./navbar.module.css";
+import { List, X } from "phosphor-react";
 
 import Menu from "./menu/Menu";
-import MenuIcon from "./icons/MenuIcon";
-import CloseIcon from "./icons/CloseIcon";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +13,6 @@ const Navbar = () => {
 
   return (
     <div className={`${styles.container}`}>
-      {/* Left commands */}
       <div className={`${styles.leftCommands}`}>
         <div className={`${styles.button}`} role="button">
           <svg
@@ -38,7 +36,6 @@ const Navbar = () => {
         </h4>
       </div>
 
-      {/* Right commands */}
       <div className={`${styles.rightCommands}`}>
         {!isMenuOpen && (
           <div
@@ -46,7 +43,7 @@ const Navbar = () => {
             role="button"
             onClick={handleMenuClick}
           >
-            <MenuIcon />
+            <List size={24} color="#ffffff" />
           </div>
         )}
 
@@ -57,7 +54,7 @@ const Navbar = () => {
             role="button"
             onClick={handleMenuClick}
           >
-            <CloseIcon />
+            <X size={24} color="#ffffff" />
           </div>
         )}
       </div>
