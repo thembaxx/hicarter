@@ -22,7 +22,7 @@ const Popular = () => {
 
   return (
     <div className={`${styles.container}`}>
-      <Header title="Popular vehicles" action={{ name: "See all" }} />
+      <Header title="Popular vehicles" action={{ name: "View all" }} />
 
       <div className={`${styles.list}`}>
         {items.map(({ name, stock }, i) => (

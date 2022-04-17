@@ -20,7 +20,7 @@
   position: relative;
   z-index: 10;
 
-  stroke: darkgray;
+  stroke: var(--secondary-color);
 }
 
 .curtain {
@@ -31,7 +31,7 @@
 
 .bg {
   border-radius: 100%;
-  background-color: var(--black-500);
+  background-color: var(--black-100);
   position: absolute;
   z-index: 1;
 
