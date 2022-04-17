@@ -32,7 +32,7 @@ const Reviews = () => {
   return (
     <div className={`${styles.container}`}>
       <div className={`${styles.header}`}>
-        <div className={`${styles.headline}`}>Client reviews</div>
+        <div className={`${styles.headline}`}>Testimonials</div>
         <p className={`${styles.subheading}`}>
           With Carter, you will get the best Service and advice that you deserve
         </p>

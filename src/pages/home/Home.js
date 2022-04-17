@@ -54,15 +54,11 @@ const Home = () => {
       </div>
       <Hero />
       <div className={`${styles.main}`}>
-        <div style={{ backgroundColor: "white" }}>
-          <div style={{ marginBottom: 40 }}>
-            <StepsCard />
-          </div>
-          <Deals />
-          <Reviews />
-          <About />
-          <Faq />
-        </div>
+        <StepsCard />
+        <Deals />
+        <Reviews />
+        <About />
+        <Faq />
         <Footer />
       </div>
     </div>
