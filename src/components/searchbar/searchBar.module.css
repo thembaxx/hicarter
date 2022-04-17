@@ -2,7 +2,7 @@
   background-color: var(--primary-color);
   padding-bottom: 10px;
   position: relative;
-  z-index: inherit;
+  z-index: 100;
   width: 100%;
 }
 

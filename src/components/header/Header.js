@@ -4,16 +4,14 @@ import styles from "./header.module.css";
 import Navbar from "../navbar/Navbar";
 import SearchBar from "../searchbar/SearchBar";
 
-const Header = ({ toggleScroll }) => {
+const Header = () => {
   const [hideNav, setHideNav] = useState(false);
 
   const inputFocusChanged = (isFocused, toggle) => {
     if (isFocused && toggle) {
       setHideNav(true);
-      toggleScroll(false);
     } else if (!isFocused && toggle) {
       setHideNav(false);
-      toggleScroll(true);
     }
   };
 
@@ -27,7 +25,7 @@ const Header = ({ toggleScroll }) => {
             height: hideNav ? 0 : 64,
           }}
         >
-          <Navbar toggleScroll={toggleScroll} />
+          <Navbar />
         </div>
         <SearchBar inputFocusChanged={inputFocusChanged} />
       </div>

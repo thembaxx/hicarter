@@ -1,17 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import styles from "./navbar.module.css";
 
 import Menu from "./menu/Menu";
 import MenuIcon from "./icons/MenuIcon";
 import CloseIcon from "./icons/CloseIcon";
 
-const Navbar = ({ toggleScroll }) => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const menuRef = useRef(null);
 
   const handleMenuClick = () => {
     setIsMenuOpen((prev) => !prev);
-    toggleScroll(isMenuOpen);
   };
 
   return (
@@ -65,7 +63,6 @@ const Navbar = ({ toggleScroll }) => {
       </div>
 
       <div
-        ref={menuRef}
         className={`${styles.menu}`}
         style={{
           transform: isMenuOpen ? `translateY(0)` : `translateY(100%)`,
