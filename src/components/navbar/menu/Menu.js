@@ -1,12 +1,22 @@
 import React from "react";
 import styles from "./menu.module.css";
-import { Car } from "phosphor-react";
+import {
+  Car,
+  House,
+  Buildings,
+  Wrench,
+  Phone,
+  Newspaper,
+  FacebookLogo,
+  TwitterLogo,
+  LinkedinLogo,
+} from "phosphor-react";
 
 // import CarIcon from "../icons/CarIcon";
-import LocationIcon from "../icons/LocationIcon";
-import CarServiceIcon from "../icons/CarServiceIcon";
-import PhoneIcon from "../icons/PhoneIcon";
-import BlogIcon from "../icons/BlogIcon";
+// import LocationIcon from "../icons/LocationIcon";
+// import CarServiceIcon from "../icons/CarServiceIcon";
+// import PhoneIcon from "../icons/PhoneIcon";
+// import BlogIcon from "../icons/BlogIcon";
 
 import MenuItem from "./MenuItem";
 
@@ -21,11 +31,59 @@ const Menu = () => {
           </div>
         ))}
       </div>
+      <div className={`${styles.contact}`}>
+        <div>
+          <div className={`${styles.social}`}>
+            <FacebookLogo
+              className={`${styles.sociaIcon}`}
+              size={24}
+              color="#ffffff"
+              weight="fill"
+            />
+            <TwitterLogo
+              className={`${styles.sociaIcon}`}
+              size={24}
+              color="#ffffff"
+              weight="fill"
+            />
+            <LinkedinLogo
+              className={`${styles.sociaIcon}`}
+              size={24}
+              color="#ffffff"
+              weight="fill"
+            />
+          </div>
+          <div>
+            <a
+              href="mailto:hello@heycarter.co.za"
+              className={`${styles.email}`}
+            >
+              hello@heycarter.co.za
+            </a>
+          </div>
+          <div>
+            <a href="tel:+27100452682" className={`${styles.tel}`}>
+              +27 (031) 045 2682
+            </a>
+          </div>
+        </div>
+        <div>
+          <div className={`${styles.address}`}>
+            65 Corlet Dr <br /> Johanessburg <br /> 2196
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
 const menuItems = [
+  {
+    name: "Home",
+    route: "/",
+    // Icon: CarIcon,
+    Icon: House,
+  },
   {
     name: "Browse cars",
     route: "/",
@@ -35,22 +93,22 @@ const menuItems = [
   {
     name: "Our Dealerships",
     route: "/",
-    Icon: LocationIcon,
+    Icon: Buildings,
   },
   {
     name: "Book a Service",
     route: "/",
-    Icon: CarServiceIcon,
+    Icon: Wrench,
   },
   {
     name: "Get in touch",
     route: "/",
-    Icon: PhoneIcon,
+    Icon: Phone,
   },
   {
     name: "Blog",
     route: "/",
-    Icon: BlogIcon,
+    Icon: Newspaper,
   },
 ];
 
