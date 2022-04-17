@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./menuItem.module.css";
-// import { CaretRight } from "phosphor-react";
+import { CaretRight } from "phosphor-react";
 
 const MenuItem = ({ name, Icon }) => {
   return (
@@ -13,11 +13,11 @@ const MenuItem = ({ name, Icon }) => {
         )}
         <div>{name}</div>
       </div>
-      {/* <div className={`${styles.rightCommands}`}>
+      <div className={`${styles.rightCommands}`}>
         <div role="button" className={`${styles.button}`}>
           <CaretRight size={20} color="#ffffff" />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
