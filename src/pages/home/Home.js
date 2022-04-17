@@ -56,7 +56,8 @@ const Home = () => {
         </form>
       </div>
       <div className={`${styles.header}`}>
-      Effortless car buying at your fingertips
+        Effortless car buying
+        <br /> at your fingertips
       </div>
       <Hero />
       <div className={`${styles.main}`}>
