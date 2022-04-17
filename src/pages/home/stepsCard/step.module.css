@@ -38,7 +38,7 @@
 }
 
 .title {
-  color: var(--primary-color);
+  color: var(--black);
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 2px;
@@ -47,6 +47,7 @@
 
 .subtitle {
   color: var(--black-200);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
+  font-weight: 500;
   line-height: 1.3;
 }

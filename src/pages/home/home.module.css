@@ -26,7 +26,7 @@
 }
 
 .heading {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.5;
   color: white;
@@ -63,9 +63,10 @@
   color: white;
   font-weight: 600;
   font-size: 0.875rem;
-  margin-top: 15px;
+  margin-top: 16px;
   display: flex;
   align-items: center;
+  padding: 12px 0;
 }
 
 .hr {
@@ -75,15 +76,16 @@
 
 .dropdown {
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  /* border: 1px solid rgba(255, 255, 255, 0.05); */
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: white;
+  background-color: rgba(255, 255, 255, 1);
+  color: var(--black-100);
+  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.875rem;
-  padding: 10px 20px;
+  font-size: 1rem;
+  padding: 12px 12px 12px 20px;
   margin-bottom: 5px;
 }
 
@@ -95,9 +97,9 @@
   color: white;
   font-size: 0.875rem;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.4;
   margin-top: 24px;
-  padding: 14px 20px;
+  padding: 16px 20px;
   width: 100%;
   display: flex;
   align-items: center;

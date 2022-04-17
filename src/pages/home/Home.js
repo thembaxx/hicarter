@@ -36,14 +36,16 @@ const Home = () => {
         <form>
           <div role="button" className={`${styles.dropdown}`}>
             <div>
-              Brand{" "}
-              {/* <span style={{ opacity: 0.67, fontWeight: 400 }}>(Optional)</span> */}
+              Choose car Brand{" "}
+              <span style={{ opacity: 0.67, fontWeight: 400 }}>
+                (BMW, Renault, Toyota etc.)
+              </span>
             </div>
             <CaretDown size={18} />
           </div>
           <div role="button" className={`${styles.dropdown}`}>
             <div>
-              Model{" "}
+              Choose car Model{" "}
               {/* <span style={{ opacity: 0.67, fontWeight: 400 }}>(Optional)</span> */}
             </div>
             <CaretDown size={18} />
