@@ -53,3 +53,45 @@
   flex: 0 0 80%;
   max-width: 80%;
 }
+
+.scroller {
+  cursor: pointer;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+
+  height: 12px;
+
+  margin: 0 24px;
+  margin-top: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.curtain,
+.thumb {
+  height: 4px;
+}
+
+.curtains {
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+
+.curtain {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.thumb {
+  border-radius: 16px;
+  background-color: var(--black-200);
+
+  width: 20%;
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+}
