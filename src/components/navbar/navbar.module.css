@@ -21,6 +21,11 @@
   z-index: 100;
 }
 
+.rightCommands {
+  position: absolute;
+  right: 10px;
+}
+
 .button {
   cursor: pointer;
   height: 44px;
