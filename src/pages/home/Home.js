@@ -55,6 +55,9 @@ const Home = () => {
           <div className={`${styles.submit}`}>Browse 12, 234 cars</div>
         </form>
       </div>
+      <div className={`${styles.header}`}>
+      Effortless car buying at your fingertips
+      </div>
       <Hero />
       <div className={`${styles.main}`}>
         <StepsCard />

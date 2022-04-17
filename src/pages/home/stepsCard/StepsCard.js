@@ -13,9 +13,9 @@ const StepsCard = () => {
     <div className={`${styles.container}`}>
       <Card>
         <div className={`${styles.inner}`}>
-          <div className={`${styles.heading}`}>
+          {/* <div className={`${styles.heading}`}>
             Effortless car buying at your fingertips
-          </div>
+          </div> */}
           <div className={`${styles.subheading}`}>
             All it takes is <b>Three simple steps</b> to get the car of your
             dreams in your hands and on the road.

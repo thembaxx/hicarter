@@ -24,7 +24,7 @@ const About = () => {
           width: "100%",
           backgroundColor: "white",
           opacity: 0.1,
-          margin: "20px 0",
+          margin: "32px 0",
         }}
       ></div>
       <div className={`${styles.awards}`}>
@@ -35,9 +35,14 @@ const About = () => {
             color="var(--secondary-color)"
             style={{ marginTop: 2 }}
           />
-          <span>
-            <b>2020</b> | Renault Dealer of the Year (Carter Renault Melrose)
-          </span>
+          <div style={{ marginLeft: 12 }}>
+            <div>
+              <b>2020</b> | Renault Dealer of the Year
+            </div>
+            <div style={{ fontWeight: 400, opacity: 0.87 }}>
+              Carter Renault Melrose
+            </div>
+          </div>
         </div>
         <div className={`${styles.award}`}>
           <Medal
@@ -45,14 +50,18 @@ const About = () => {
             color="var(--secondary-color)"
             style={{ marginTop: 2 }}
           />
-          <span>
-            <b>2021</b> | Renault Dealer of the Year (Carter Renault
-            Springfield)
-          </span>
+          <div style={{ marginLeft: 12 }}>
+            <div>
+              <b>2021</b> | Renault Dealer of the Year
+            </div>
+            <div style={{ fontWeight: 400, opacity: 0.87 }}>
+              Carter Renault Springfield
+            </div>
+          </div>
         </div>
       </div>
       <div className={`${styles.button}`} role="button">
-        <div>Read our story</div>
+        <div>more about us</div>
       </div>
     </div>
   );
