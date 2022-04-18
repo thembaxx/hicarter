@@ -1,3 +1,7 @@
+.container {
+  overflow-x: hidden;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -28,23 +32,13 @@
   padding: 0 20px 30px 20px;
   display: flex;
   align-items: center;
-  overflow-x: auto;
 
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  /* transition: transform 700ms ease; */
   transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 
-  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.list::-webkit-scrollbar {
-  display: none;
 }
 
 .item {
@@ -91,7 +85,11 @@
   border-radius: 16px;
   background-color: var(--black-200);
 
-  width: 20%;
   position: absolute;
   transform: translate3d(0, 0, 0);
+
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.19, 1, 0.22, 1);
 }
