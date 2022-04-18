@@ -21,10 +21,11 @@ const About = () => {
       <div
         style={{
           height: 1,
-          width: "100%",
+          width: "calc(100% - 56px)",
           backgroundColor: "white",
           opacity: 0.1,
-          margin: "32px 0",
+          margin: "32px 0px",
+          marginLeft: 20,
         }}
       ></div>
       <div className={`${styles.awards}`}>

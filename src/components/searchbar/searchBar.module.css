@@ -63,7 +63,7 @@
 .input {
   border: none;
   outline: none;
-  color: var(--black);
+  color: var(--primary-color-10);
   height: 100%;
   flex-grow: 1;
   width: 100%;
@@ -73,7 +73,7 @@
 }
 
 .input::placeholder {
-  color: rgba(00, 0, 0, 0.67);
+  color: var(--primary-color-20);
   font-weight: 500;
 }
 

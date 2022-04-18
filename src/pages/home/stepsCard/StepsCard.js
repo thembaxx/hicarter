@@ -20,7 +20,7 @@ const StepsCard = () => {
             All it takes is <b>Three simple steps</b> to get the car of your
             dreams in your hands and on the road.
           </div>
-          <div>
+          <div className={`${styles.steps}`}>
             {steps.map(({ Img, title, subtitle }, i) => (
               <Step
                 key={i}
@@ -30,10 +30,11 @@ const StepsCard = () => {
                 Img={Img}
               />
             ))}
-          </div>
-          <div role="button" className={`${styles.button}`}>
+             <div role="button" className={`${styles.button}`}>
             <div>Find out more</div>
           </div>
+          </div>
+         
         </div>
       </Card>
     </div>

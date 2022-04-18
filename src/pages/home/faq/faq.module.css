@@ -5,6 +5,7 @@
 }
 
 .header {
+  color: var(--primary-color-10);
   font-size: 1.25rem;
   font-weight: 700;
   padding: 0 20px;
@@ -40,9 +41,9 @@
 
 /* Content */
 .content {
-  background-color: #fafafa;
+  background-color: #f2f5f9;
 
-  color: var(--black-200);
+  color: var(--primary-color-20);
   font-size: 0.875rem;
   font-weight: 500;
 
