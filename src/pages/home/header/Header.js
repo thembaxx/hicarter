@@ -9,27 +9,20 @@ const Header = () => {
         Find the right car for your needs
       </div>
       <form>
-        <div role="button" className={`${styles.dropdown}`}>
-          <div>
-            <span style={{ marginRight: 4 }}>Choose Brand</span>
-            <span style={{ opacity: 0.67, fontWeight: 400 }}>
-              (Renault, Toyota etc.)
-            </span>
-          </div>
-          <CaretDown size={18} />
-        </div>
-        <div role="button" className={`${styles.dropdown}`}>
-          <div>Choose Model</div>
-          <CaretDown size={18} />
-        </div>
+        <button className={`${styles.dropdown}`}>
+          <div>Make</div>
+          <CaretDown size={18} weight="bold" />
+        </button>
+        <button disabled={true} className={`${styles.dropdown}`}>
+          <div>Choose model</div>
+          <CaretDown size={18} weight="bold" />
+        </button>
         <div role="button" className={`${styles.button}`}>
           <Plus color="white" weight="bold" size={16} />
           <div style={{ marginLeft: 10 }}>More filters</div>
         </div>
         <div className={`${styles.submit}`}>
-          <div>
-            Browse <b>12, 234</b> vehicles
-          </div>
+          <div>12, 234 Offers</div>
         </div>
       </form>
     </div>

@@ -11,7 +11,6 @@
   margin-bottom: 24px;
 }
 
-
 .button {
   cursor: pointer;
   color: white;
@@ -24,9 +23,10 @@
 }
 
 .dropdown {
-  border-radius: 5px;
   background-color: rgba(255, 255, 255, 1);
-  color: var(--black);
+  border: none;
+  border-radius: 5px;
+  color: var(--primary-color-10);
 
   cursor: pointer;
 
@@ -36,9 +36,15 @@
 
   font-size: 1rem;
   font-weight: 500;
+  line-height: 1.1;
 
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   padding: 12px 16px 12px 20px;
+  width: 100%;
+}
+
+.dropdown:disabled {
+  color: var(--primary-color-600);
 }
 
 .submit {
@@ -53,6 +59,7 @@
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.4;
+  text-transform: uppercase;
 
   margin-top: 24px;
   padding: 16px 20px;
