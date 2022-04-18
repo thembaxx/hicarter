@@ -10,7 +10,7 @@ const Review = ({ content, rating, name, date, imgUrl }) => {
     <div className={`${styles.container}`}>
       <div className={`${styles.rating}`}>
         {stars.map((_, i) => (
-          <Star size={12} weight="fill" />
+          <Star key={i} size={12} weight="fill" />
         ))}
       </div>
       <div className={`${styles.paragraph}`}>{content}</div>
