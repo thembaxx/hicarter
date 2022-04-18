@@ -12,11 +12,11 @@
   font-size: 1.5rem;
   line-height: 1.25;
   font-weight: 800;
-  color: var(--black);
+  color: var(--primary-color-10);
 }
 
 .subheading {
-  color: var(--black);
+  color: var(--primary-color-10);
 
   font-size: 0.9375rem;
   font-weight: 600;

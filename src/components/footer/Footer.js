@@ -14,13 +14,13 @@ const Footer = () => {
     <div className={`${styles.container}`}>
       <div className={`${styles.socialNetworks}`}>
         <div className={`${styles.socialItem}`}>
-          <FacebookLogo size={24} color="rgba(0,0,0,0.7)" weight="fill" />
+          <FacebookLogo size={24} weight="fill" />
         </div>
         <div className={`${styles.socialItem}`}>
-          <LinkedinLogo size={24} color="rgba(0,0,0,0.7)" weight="fill" />
+          <LinkedinLogo size={24} weight="fill" />
         </div>
         <div className={`${styles.socialItem}`}>
-          <TwitterLogo size={24} color="rgba(0,0,0,0.7)" weight="fill" />
+          <TwitterLogo size={24} weight="fill" />
         </div>
       </div>
       <div className={`${styles.links}`}>
@@ -55,11 +55,7 @@ const Footer = () => {
             </div>
             <div className={`${styles.meta}`}>
               <div>
-                <MapPin
-                  size={16}
-                  color="var(--black-200)"
-                  style={{ marginTop: 2 }}
-                />
+                <MapPin size={16} style={{ marginTop: 2 }} />
               </div>
               <div style={{ marginLeft: 8 }}>
                 65 Corlett Drive <br /> Birnam
@@ -67,11 +63,7 @@ const Footer = () => {
             </div>
             <div className={`${styles.meta}`}>
               <div>
-                <Phone
-                  size={16}
-                  color="var(--black-200)"
-                  style={{ marginTop: 2 }}
-                />
+                <Phone size={16} style={{ marginTop: 2 }} />
               </div>
               <a href="tel:+27100452682" style={{ marginLeft: 8 }}>
                 +27 (010) 045 2682
@@ -86,11 +78,7 @@ const Footer = () => {
             </div>
             <div className={`${styles.meta}`}>
               <div>
-                <MapPin
-                  size={16}
-                  color="var(--black-200)"
-                  style={{ marginTop: 2 }}
-                />
+                <MapPin size={16} style={{ marginTop: 2 }} />
               </div>
               <div style={{ marginLeft: 8 }}>
                 1 Intersite Avenue <br /> Springfield Park
@@ -98,11 +86,7 @@ const Footer = () => {
             </div>
             <div className={`${styles.meta}`}>
               <div>
-                <Phone
-                  size={16}
-                  color="var(--black-200)"
-                  style={{ marginTop: 2 }}
-                />
+                <Phone size={16} style={{ marginTop: 2 }} />
               </div>
               <a href="tel:+27310450500" style={{ marginLeft: 8 }}>
                 +27 (031) 045 0500
